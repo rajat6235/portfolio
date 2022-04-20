@@ -1,11 +1,13 @@
 import React from "react";
 import Typical from "react-typical";
+import "./Profile.css";
 export default function Profile() {
   return (
     <div className="profile-container">
       <div className="profile-parent">
         <div className="profile-details">
           <div className="colz">
+          <div className="colz-icon">
             <a href="#">
               <i className="fa fa-facebook-square"></i>
             </a>
@@ -21,6 +23,7 @@ export default function Profile() {
             <a href="add links to github etc here">
               <i className="fa fa-twitter"></i>
             </a>
+            </div>
           </div>
           <div className="profile-details-name">
             <span className="primary-text">
@@ -50,7 +53,7 @@ export default function Profile() {
               </span>
             </span>
           </div>
-          <div className="profile -options">
+          <div className="profile-options">
               <button className="btn primary-btn">
                   {""}
                   Hire Me {" "}
@@ -61,6 +64,11 @@ export default function Profile() {
                       </button>
 
               </a>
+          </div>
+        </div>
+        <div className="profile-picture">
+          <div className="profile-picture-background">
+            
           </div>
         </div>
       </div>

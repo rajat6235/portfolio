@@ -1,11 +1,9 @@
 import './App.css';
-import Profile from './Container/Home/Profile';
-import Footer from './Container/Home/Footer/Footer';
+import Home from './Container/Home/Home';
 function App() {
   return (
     <div className="App">
-     <Profile/>
-<Footer/>
+<Home/>
     </div>
   );
 }

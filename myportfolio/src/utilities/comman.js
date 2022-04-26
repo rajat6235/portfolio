@@ -1,4 +1,4 @@
-import Home from "../Container/Home/Home";import Profile from "../Container/Home/Profile/Profile";
+import Home from "../Container/Home/Home";
 export const TOTAL_SCREENS = [
   {
     screen_name: "Home",

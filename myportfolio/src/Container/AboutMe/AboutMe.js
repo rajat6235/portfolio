@@ -2,6 +2,7 @@ import React from "react";
 import ScreenHeading from "../../utilities/ScreenHeadings/ScreenHeading";
 import ScrollService from "../../utilities/ScrollServices";
 import Animations from "../../utilities/Animations";
+import './AboutMe.css'
 export default function AboutMe(props) {
   let fadeInScreenHandler =(screen)=>{
       if (screen.fadeScreen !== props.id)
@@ -39,7 +40,7 @@ highlights:{
       )
   }
     return (
-    <div className="about-me screen-container" id={props.id || ""}>
+    <div className="about-me-container screen-container" id={props.id || ""}>
       <div className="about-me-parent">
         <ScreenHeading title={"About Me"} subHeading={"Why Choose Me?"} />
         <div className="about-me-card">

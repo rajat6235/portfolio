@@ -7,22 +7,22 @@ export default function Profile() {
       <div className="profile-parent">
         <div className="profile-details">
           <div className="colz">
-          <div className="colz-icon">
-            <a href="#">
-              <i className="fa fa-facebook-square"></i>
-            </a>
-            <a href="#">
-              <i className="fa fa-google-plus-square"></i>
-            </a>{" "}
-            <a href="#">
-              <i className="fa fa-instagram"></i>
-            </a>{" "}
-            <a href="#">
-              <i className="fa fa-facebook-square"></i>
-            </a>
-            <a href="add links to github etc here">
-              <i className="fa fa-twitter"></i>
-            </a>
+            <div className="colz-icon">
+              <a href="#">
+                <i className="fa fa-facebook-square"></i>
+              </a>
+              <a href="#">
+                <i className="fa fa-google-plus-square"></i>
+              </a>{" "}
+              <a href="#">
+                <i className="fa fa-instagram"></i>
+              </a>{" "}
+              <a href="#">
+                <i className="fa fa-facebook-square"></i>
+              </a>
+              <a href="add links to github etc here">
+                <i className="fa fa-twitter"></i>
+              </a>
             </div>
           </div>
           <div className="profile-details-name">
@@ -54,22 +54,14 @@ export default function Profile() {
             </span>
           </div>
           <div className="profile-options">
-              <button className="btn primary-btn">
-                  {""}
-                  Hire Me {" "}
-              </button>
-              <a href= "resume21.pdf" download='Rajat resume21.pdf'>
-                  <button className = "btn highlighted-btn">
-                      Get Resume 
-                      </button>
-
-              </a>
+            <button className="btn primary-btn">Hire Me</button>
+            <a href="resume21.pdf" download="Rajat resume21.pdf">
+              <button className="btn highlighted-btn">Get Resume</button>
+            </a>
           </div>
         </div>
         <div className="profile-picture">
-          <div className="profile-picture-background">
-            
-          </div>
+          <div className="profile-picture-background"></div>
         </div>
       </div>
     </div>

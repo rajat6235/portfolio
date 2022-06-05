@@ -48,7 +48,7 @@ export default function Resume(props) {
     { skill: "CSS", ratingPercentage: 80 },
   ];
 
-  const projectDEtails = [
+  const projectDetails = [
     {
       title: "Personal Portfolio Website",
       duration: { fromDate: "2020", toDate: "2021" },
@@ -130,10 +130,53 @@ export default function Resume(props) {
  refactoring legacy code
           </spam>
           <br/>
-          
-        </div>
+          </div>
+        </div>,
+        <div className="resume-screen-container programming-skills-container" 
+        key ="programming-skills">
+            {programmingSkillDetails.map((skill,index)=>(
+                <div className="skill-parent" key={index}>
+                    <div className="heading-bullet">
+                        <span>
+                            {skill.skill}
+                        </span>
+                        <div className="skill-percentage">
+                            <div style={{width: skill.ratingPercentage + "%"}}
+                            className='active-percentage'>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            ))}
+        </div>,
+        <div className="resume-screen-container" key ="projects">
+            {projectDetails.map((projectDetails,index)=>(
+                <ResumeHeading
+                key={index}
+                heading={projectDetails.title}
+                subHeading={projectDetails.subHeading}
+                description={projectDetails.description}
+                fromDate={projectDetails.duration.fromDate}
+                toDate={projectDetails.duration.toDate}
+                />
+            ))}
+        </div>,
+        <div className="resume-screen-container" key ="interests">
+<ResumeHeading
+heading='Gyming'
+description= 'Apart from being tech ethusiast and coder, I also love to work-out in gym and stay fit.'
+/>
+<ResumeHeading
+heading='Cooking'
+description= 'I like to cook healthy food.'
+/>
+<ResumeHeading
+heading='Video Games'
+description= 'I like to play video-games in my free time.'
+/>
+</div>
       </div>
-    </div>,
+    
   ];
   let fadeInScreenHandler = (screen) => {
     if (screen.fadeScreen !== props.id) return;

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ScreenHeading from "../../utilities/ScreenHeadings/ScreenHeading";
 import ScrollService from "../../utilities/ScrollServices";
 import Animations from "../../utilities/Animations";
-
+import "./Resume.css"
 export default function Resume(props) {
   const [selectedBulletIndex, setSelectedBulletIndex] = useState(0);
   const [carousalOffSetStyle, setCarausalOffSetStyle] = useState({});
@@ -203,7 +203,7 @@ export default function Resume(props) {
       className={index === selectedBulletIndex ? "bullet selected-bullet" : "bullet"}
      key={index}>
          <img className="bullet-logo"
-        //  src ={require(`../../assets/Resume/${bullet.logoSrc}`)}
+        //  src ={require(`../../assets/Resume/${bullet.logoSrc}`).default}
          alt='no internet connection...'/>
      </div>
     ));

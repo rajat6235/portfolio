@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ScreenHeading from "../../utilities/ScreenHeadings/ScreenHeading";
 import ScrollService from "../../utilities/ScrollServices";
 import Animations from "../../utilities/Animations";
-import "./Resume.css"
+import "./Resume.css" 
 export default function Resume(props) {
   const [selectedBulletIndex, setSelectedBulletIndex] = useState(0);
   const [carousalOffSetStyle, setCarausalOffSetStyle] = useState({});
@@ -40,11 +40,11 @@ export default function Resume(props) {
   };
 
   const resumeBullets = [
-    { label: "Education", logosrc: "education.svg" },
-    { label: "Work History ", logosrc: "work-history.svg" },
-    { label: "Programming Skills", logosrc: "programming-skills.svg" },
-    { label: "Projects", logosrc: "projects.svg" },
-    { label: "Interests", logosrc: "interests.svg" },
+    { label: "Education", logoSrc: "education.svg" },
+    { label: "Work History ", logoSrc: "work-history.svg" },
+    { label: "Programming Skills", logoSrc: "programming-skills.svg" },
+    { label: "Projects", logoSrc: "projects.svg" },
+    { label: "Interests", logoSrc: "interests.svg" },
   ];
 
   const programmingSkillDetails = [
@@ -203,8 +203,9 @@ export default function Resume(props) {
       className={index === selectedBulletIndex ? "bullet selected-bullet" : "bullet"}
      key={index}>
          <img className="bullet-logo"
-        //  src ={require(`../../assets/Resume/${bullet.logoSrc}`).default}
-         alt='no internet connection...'/>
+         src ={require(`../../assets/Resume/${bullet.logoSrc}`).default}
+         alt="B"/>
+     <span className="bullet-label">{bullet.label}</span>
      </div>
     ));
   }

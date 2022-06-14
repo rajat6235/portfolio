@@ -23,7 +23,7 @@ export default function Resume(props) {
           <span> {props.heading ? props.heading : ""}</span>
           {props.fromDate && props.toDate ? (
             <div className="heading-date">
-              {props.fromDate + "_" + props.toDate}
+              {props.fromDate + "-" + props.toDate}
             </div>
           ) : (
             <div></div>
@@ -203,17 +203,18 @@ export default function Resume(props) {
   };
 
   const getBullets = () => {
-    return resumeBullets.map((bullet, index) => (
-      <div
+    return resumeBullets.map((bullet, index) => {
+      const icon = bullet.logoSrc ? require (`../../assets/Resume/${bullet.logoSrc}`) : "";
+      return (<div
        onClick={() => handleCarousal(index)}
       className={index === selectedBulletIndex ? "bullet selected-bullet" : "bullet"}
       key={index}>
          <img className="bullet-logo"
-         src ={require(`../../assets/Resume/${bullet.logoSrc}`).default}
+         src ={icon}
          alt="B"/>
      <span className="bullet-label">{bullet.label}</span>
-     </div>
-    ));
+     </div>)
+    });
   };
 
   const getResumeScreen = () =>{

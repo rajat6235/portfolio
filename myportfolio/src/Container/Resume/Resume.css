@@ -28,6 +28,7 @@
 .experience-description {
   margin: 10px 0 0 0;
   text-align: justify;
+  max-width: 100%;
 }
 
 .experience-description-text{
@@ -111,32 +112,37 @@
   font-size: 16px;
   font-family: "Poppins SemiBold";
 }
+
 .heading-bullet {
   position: absolute;
   left: -30px;
   height: 15px;
   width: 15px;
   top: 5px;
-  background-color: var(--dark-orange);
+  background-color:#ff5823;
   border-radius: 50%;
 }
+
 .resume-sub-heading{
     font-size: 14px;
     font-family: "Poppin SemiBold";
-    color:#111;
-    margin: 10px 0 0 ;
+    color:black;
+    margin: 10px 0 0 0;
 }
+
 .resume-heading-description{
     font-size: 12px;
     text-align: justify;
 }
+
 .heading-date{
-  background-color: var(--dark-orange);
+  background-color:#ff5823;
 padding: 4px 12px;
 font-size: 14px;
 border-radius: 14px;
 color: white;
 }
+
 .skill-parent{
     display: flex;
     flex-direction: column;
@@ -154,16 +160,54 @@ color: white;
     position: relative;
     height: 15px;
     width: 70%;
-  background-color: var(--dark-orange);
+  background-color: #ff5823;
 }
+
 .skill-percentage .active-percentage-bar{
-    height: 15px;
+height: 15px;
 transition: 0.8s ease;
 position: absolute;
 background-color: #1f2235;
 }
+
 .skill-parent span {
     font-family: "Poppins SemiBold";
     font-size: 16px;
-  background-color: var(--dark-orange);
+  background-color: #ff5823;
+}
+
+@media only screen and (max-width: 1023px) {
+  .resume-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bullets {
+    width: 90%;
+  }
+
+  .resume-card {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0;
+    align-items: center;
+    width: 90%;
+  }
+
+  .resume-bullet-details {
+    height: 360px;
+    padding: 0;
+    width: fit-content;
+  }
+
+  .resume-bullets {
+    margin: 30px 0;
+    width: 100%;
+  }
+
+  .selected-bullet {
+    width: 100%;
+  }
 }

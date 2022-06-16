@@ -58,7 +58,7 @@ function Testimonial(props) {
                     </p>
                     <ul className="stars list-unstyled">
                       <li>
-                        <i className="fa fa-star" />
+                        {/* <i className="fa fa-star" /> */}
                       </li>
                       <li>
                         <i className="fa fa-star" />
@@ -105,7 +105,7 @@ function Testimonial(props) {
                         <i className="fa fa-star" />
                       </li>
                       <li>
-                        <i className="fa fa-star-half-alt" />
+                        {/* <i className="fa fa-star-half-alt" /> */}
                       </li>
                       <li>
                         <i className="fa fa-star" />
@@ -128,7 +128,7 @@ function Testimonial(props) {
                     <p>
                       <i className="fa fa-quote-left" />
                       I patronized Rajat and when He delivered, I honestly fell
-                      in love with the project He is a very honest guy and he
+                      {/* in love with the project He is a very honest guy and he */}
                       delivers ontime.
                       <i className="fa fa-quote-right" />
                     </p>

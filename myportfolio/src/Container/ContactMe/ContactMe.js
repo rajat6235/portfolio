@@ -22,7 +22,15 @@ const [message,setMessage] = useState("")
 const [banner,seBanner] = useState("")
 const [bool,setBool] = useState("")
 
-
+const handleName = (e) =>{
+    setName(e.target.value);
+};
+const handleEmail = (e) =>{
+    setEmail(e.target.value);
+};
+const handleMessage = (e) =>{
+    setMessage(e.target.value);
+};
 
 
 
@@ -68,13 +76,26 @@ return (
                 <form>
                     <p>{banner}</p>
                     <label htmlFor='name'>Name</label>
-                    <input type='text'/>
+                    <input type='text'
+                    onChange={handleName} value={name}
+                    />
 
                     <label htmlFor='email'>Email</label>
-                    <input type='text'/>
+                    <input type='text'
+                    onChange={handleEmail} value={email}
+                    />
 
                     <label htmlFor='message'>Message</label>
-                    <input type='text'/>
+                    <input type='text'
+                    onChange={handleMessage} value={message}
+                    />
+
+                    <div className='send-btn'>
+                        <button type='submt'>
+                            send <i className='fa fa-paper-plane'/>
+
+                        </button>
+                    </div>
                 </form>
             </div>
         </div>

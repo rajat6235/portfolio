@@ -5,7 +5,7 @@ import load1 from '../../../src/images/load2.gif'
 import ScreenHeading from '../../utilities/ScreenHeadings/ScreenHeading'
 import ScrollService from '../../utilities/ScrollServices'
 import Animations from '../../utilities/Animations'
-
+import './ContactMe.css'
 
 export default function ContactMe(props) {
     let fadeInScreenHandler =(screen)=>{

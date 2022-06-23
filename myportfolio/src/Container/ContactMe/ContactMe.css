@@ -39,6 +39,7 @@
   display: flex;
   color: #111;
   padding: 15px;
+  opacity: 0.9;
   justify-content: center;
   flex-direction: column;
   margin-top: -52px;
@@ -102,6 +103,10 @@ form button:hover {
 }
 form {
   flex: 0.9;
+}
+button .load img{
+    width: 60px;
+    color: green
 }
 .col i {
   padding: 7px;

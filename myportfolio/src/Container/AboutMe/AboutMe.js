@@ -5,10 +5,10 @@ import Animations from "../../utilities/Animations";
 import './AboutMe.css'
 export default function AboutMe(props) {
   let fadeInScreenHandler =(screen)=>{
-      if (screen.fadeScreen !== props.id)
+      if (screen.fadeInScreen !== props.id)
       return
       Animations.animations.fadeInScreen(props.id)
-  }
+  };
   const fadeInSubscription =
   ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler)
   
@@ -40,7 +40,7 @@ highlights:{
       )
   }
     return (
-    <div className="about-me-container screen-container" id={props.id || ""}>
+    <div className="about-me-container screen-container fade-in" id={props.id || ""}>
       <div className="about-me-parent">
         <ScreenHeading title={"About Me"} subHeading={"Why Choose Me?"} />
         <div className="about-me-card">
@@ -63,9 +63,7 @@ highlights:{
               <button className="btn highlighted-btn">Get Resume</button>
             </a>
                     </div>
-
             </div>
-
         </div>
       </div>
     </div>

@@ -1,8 +1,9 @@
 import React from "react";
 import ScreenHeading from "../../utilities/ScreenHeadings/ScreenHeading";
-import ScrollService from "../../utilities/ScrollServices";
+import ScrollService from "../../utilities/ScrollService";
 import Animations from "../../utilities/Animations";
 import './AboutMe.css'
+
 export default function AboutMe(props) {
   let fadeInScreenHandler =(screen)=>{
       if (screen.fadeInScreen !== props.id)

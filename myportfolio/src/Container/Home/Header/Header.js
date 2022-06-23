@@ -1,43 +1,41 @@
 import React, { useEffect, useState } from "react";
 import { GET_SCREEN_INDEX, TOTAL_SCREENS } from "../../../utilities/comman";
-import ScrollService from "../../../utilities/ScrollServices";
+import ScrollService from "../../../utilities/ScrollService";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Header.css";
-
 export default function Header() {
   const [selectedScreen, setSelectedScreen] = useState(0);
   const [showHeaderOptions, setShowHeaderOptions] = useState(false);
 
   const updateCurrentScreen = (currentScreen) => {
     if (!currentScreen || !currentScreen.screenInView) return;
+
     let screenIndex = GET_SCREEN_INDEX(currentScreen.screenInView);
     if (screenIndex < 0) return;
   };
   let currentScreenSubscription =
-    ScrollService.currentScreenBroadCaster.subscribe(updateCurrentScreen);
+    ScrollService.currentScreenBroadcaster.subscribe(updateCurrentScreen);
 
   const getHeaderOptions = () => {
-    return TOTAL_SCREENS.map((screen, i) => (
+    return TOTAL_SCREENS.map((Screen, i) => (
       <div
-        key={screen.screen_name}
-        className={getHeaderOptionsClass(i)}
-        onClick={() => switchScreen(i, screen)}>
-        <span>{screen.screen_name}</span>
+        key={Screen.screen_name}
+        className={getHeaderOptionsClasses(i)}
+        onClick={() => switchScreen(i, Screen)}
+      >
+        <span>{Screen.screen_name}</span>
       </div>
     ));
   };
 
-  const getHeaderOptionsClass = (index) => {
-    let classes = "header-option";
-    if (index < TOTAL_SCREENS.length - 1) 
-{    classes = "header-option-seperator";
-    }
-    else if (selectedScreen === index)
-     {classes  = "selected-header-option";
-  }
+  const getHeaderOptionsClasses = (index) => {
+    let classes = "header-option ";
+    if (index < TOTAL_SCREENS.length - 1) classes += "header-option-seperator ";
 
-    return classes
+    if (selectedScreen === index) classes += "selected-header-option ";
+
+    return classes;
   };
 
   const switchScreen = (index, screen) => {
@@ -55,31 +53,29 @@ export default function Header() {
     };
   }, [currentScreenSubscription]);
 
-
   return (
-    <div>
-      <div
-        className="header-container"
-        onClick={() => setShowHeaderOptions(!showHeaderOptions)}
-      >
-        <div className="header-parent">
-          <div
-            className="header-hamburger"
-            onClick={() => setShowHeaderOptions(!showHeaderOptions)}
-          >
-            <FontAwesomeIcon className="header-hamburger-bars" icon={faBars} />
-          </div>
-          <div className="header-logo">
-            <span> logo </span>
-          </div>
-          <div
-            className={
-             ( showHeaderOptions)
-                ? "header-options show-hamburger-options "
-                : "header-options"
-            }>
-            {getHeaderOptions()}
-          </div>
+    <div
+      className="header-container"
+      onClick={() => setShowHeaderOptions(!showHeaderOptions)}
+    >
+      <div className="header-parent">
+        <div
+          className="header-hamburger"
+          onClick={() => setShowHeaderOptions(!showHeaderOptions)}
+        >
+          <FontAwesomeIcon className="header-hamburger-bars" icon={faBars} />
+        </div>
+        <div className="header-logo">
+          <span>EDUBABA</span>
+        </div>
+        <div
+          className={
+            showHeaderOptions
+              ? "header-options show-hamburger-options"
+              : "header-options"
+          }
+        >
+          {getHeaderOptions()}
         </div>
       </div>
     </div>

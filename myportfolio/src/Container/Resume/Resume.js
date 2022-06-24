@@ -7,13 +7,13 @@ export default function Resume(props) {
   const [selectedBulletIndex, setSelectedBulletIndex] = useState(0);
   const [carousalOffSetStyle, setCarousalOffSetStyle] = useState({});
 
-  let fadeInScreenHandler = (screen) => {
-    if (screen.fadeScreen !== props.id) return;
-
-    Animations.animations.fadeInScreen(props.id);
+   let fadeInScreenHandler =(screen)=>{
+      if (screen.fadeInScreen !== props.id)
+      return
+      Animations.animations.fadeInScreen(props.id)
   };
   const fadeInSubscription =
-    ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
+  ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler)
 
   const ResumeHeading = (props) => {
       return(
@@ -226,16 +226,16 @@ export default function Resume(props) {
           </div>
       );
   };
-  // useEffect(()=>{
-  //   return () =>{
-  //     fadeInSubscription.unsubscribe();
-  //   };
-  // },[fadeInSubscription]);
+  useEffect(()=>{
+    return () =>{
+      fadeInSubscription.unsubscribe();
+    };
+  },[fadeInSubscription]);
 
 
   return (
     //classname =-fade-in
-    <div className="resume-container screen-container" id={props.id || ""}>
+    <div className="resume-container screen-container fade-in" id={props.id || ""}>
       <div className="resume-content">
         <ScreenHeading title={"Resume"} subHeading={"My Formal Bio Details"} />
         <div className="resume-card">

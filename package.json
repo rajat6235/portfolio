@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website",
+  "main": "index.js",
+  "dependencies": {
+    "react-typical": "^0.1.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajat6235/portfolio.git"
+  },
+  "author": "rajat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rajat6235/portfolio/issues"
+  },
+  "homepage": "https://github.com/rajat6235/portfolio#readme"
+}

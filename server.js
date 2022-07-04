@@ -9,5 +9,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+app.use("/",contactRoute)
+
 const port = process.env.PORT || 6000;
-app.listen(port, console.log(`listening to port 5000`));
+app.listen(port, console.log(`listening to port 6000`));

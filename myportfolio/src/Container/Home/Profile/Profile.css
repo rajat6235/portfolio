@@ -125,6 +125,11 @@ transition: 1s ease-in;
         text-align: center;
     }
 }
+@media screen and (max-width:393px){
+    .profile-details-role h1 {
+        font-size: 38px;
+    }
+}
 @media screen and (max-width:375px){
     .profile-picture{
         height: 275px;
@@ -133,5 +138,18 @@ transition: 1s ease-in;
     }
     .profile-details{
         width: 90%;
+    }
+    .profile-details-role h1 {
+        font-size: 33px;}
+}
+
+@media screen and (max-width:360px){
+    .profile-details-role h1 {
+        font-size: 31px;
+    }
+}
+@media screen and (max-width:320px){
+    .profile-details-role h1 {
+        font-size: 28px;
     }
 }

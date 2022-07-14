@@ -26,7 +26,10 @@ export default function Header() {
         className={getHeaderOptionsClasses(i)}
         onClick={() => switchScreen(i, Screen)}
       >
-        <span>{Screen.screen_name}</span>
+        <span>{
+          Screen.screen_name==="AboutMe"? "About  Me": Screen.screen_name==="ContactMe" ? "Contact  Me" : Screen.screen_name
+            
+          }</span>
       </div>
     ));
   };

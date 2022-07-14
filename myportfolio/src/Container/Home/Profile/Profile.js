@@ -9,20 +9,14 @@ export default function Profile() {
         <div className="profile-details">
           <div className="colz">
             <div className="colz-icon">
-              <a href="#">
+              <a href="https://www.facebook.com/rajat6235">
                 <i className="fa fa-facebook-square"></i>
               </a>
-              <a href="#">
-                <i className="fa fa-google-plus-square"></i>
-              </a>{" "}
-              <a href="#">
+              <a href="https://www.instagram.com/rajat6235">
                 <i className="fa fa-instagram"></i>
-              </a>{" "}
-              <a href="#">
-                <i className="fa fa-facebook-square"></i>
               </a>
-              <a href="add links to github etc here">
-                <i className="fa fa-twitter"></i>
+              <a href="https://github.com/rajat6235">
+                <i className="fa fa-github"></i>
               </a>
             </div>
           </div>
@@ -38,15 +32,18 @@ export default function Profile() {
               <h1>
                 {" "}
                 <Typical
-                  loop={Infinity}
                   steps={[
                     "Ethusiastic Developer 🛑 ",
-                    1000,
+                    2000,
                     "React Developer 💻 ",
-                    1000,
+                    2000,
                     "Front End Developer ➬ ",
-                    1000,
+                    2000,
                   ]}
+                  wrapper="p"
+                  loop={Infinity}
+
+
                 />
               </h1>
               <span className="profile-role-tagline">

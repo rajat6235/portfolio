@@ -73,7 +73,7 @@ transition: 1s ease-in;
 .colz .colz-icon i {
     color: white;
     padding: 8px;
-    padding-left: 0px;
+    padding-left: 5px;
 }
 .colz .colz-icon i:hover {
     transform: scale(1.5);
@@ -93,6 +93,8 @@ transition: 1s ease-in;
         width: 120px;
         padding: 11px 0 ;
         z-index: 700;
+        font-size: 14px ;
+
     }
 }
 @media screen and (max-width:910px){
@@ -129,6 +131,9 @@ transition: 1s ease-in;
     .profile-details-role h1 {
         font-size: 38px;
     }
+    .profile-options .btn {
+        font-size: 12px ;
+    }
 }
 @media screen and (max-width:375px){
     .profile-picture{
@@ -139,6 +144,9 @@ transition: 1s ease-in;
     .profile-details{
         width: 90%;
     }
+    .profile-options .btn {
+        font-size: 12px ;
+    }
     .profile-details-role h1 {
         font-size: 33px;}
 }
@@ -147,9 +155,15 @@ transition: 1s ease-in;
     .profile-details-role h1 {
         font-size: 31px;
     }
+    .profile-options .btn {
+        font-size: 12px ;
+    }
 }
 @media screen and (max-width:320px){
     .profile-details-role h1 {
         font-size: 28px;
+    }
+    .profile-options .btn {
+        font-size: 12px ;
     }
 }

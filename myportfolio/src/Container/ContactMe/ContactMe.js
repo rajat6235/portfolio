@@ -70,21 +70,15 @@ export default function ContactMe(props) {
           <h2 className="title">
             <Typical loop={Infinity} steps={["Get In Touch 📧", 1000]} />
           </h2>{" "}
-          <a href="#">
-            <i className="fa fa-facebook-square"></i>
-          </a>
-          <a href="#">
-            <i className="fa fa-google-plus-square"></i>
-          </a>{" "}
-          <a href="#">
-            <i className="fa fa-instagram"></i>
-          </a>{" "}
-          <a href="#">
-            <i className="fa fa-facebook-square"></i>
-          </a>
-          <a href="add links to github etc here">
-            <i className="fa fa-twitter"></i>
-          </a>
+          <a href="https://www.facebook.com/rajat6235">
+                <i className="fa fa-facebook-square"></i>
+              </a>
+              <a href="https://www.instagram.com/rajat6235">
+                <i className="fa fa-instagram"></i>
+              </a>
+              <a href="https://github.com/rajat6235">
+                <i className="fa fa-github"></i>
+              </a>
         </div>
         <div className="back-form">
           <div className="img-back">
@@ -100,7 +94,7 @@ export default function ContactMe(props) {
             <input type="text" onChange={handleEmail} value={email} />
 
             <label htmlFor="message">Message</label>
-            <input type="text" onChange={handleMessage} value={message} />
+            <textarea type="text" onChange={handleMessage} value={message} />
 
             <div className="send-btn">
               <button type="submt">

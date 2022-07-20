@@ -18,12 +18,15 @@ export default function Profile() {
               <a href="https://github.com/rajat6235">
                 <i className="fa fa-github"></i>
               </a>
+              <a href="tel:7837733549"> 
+              <i className="fa fa-phone"></i>
+               </a>
             </div>
           </div>
           <div className="profile-details-name">
             <span className="primary-text">
               {" "}
-              Hello, I'M <span className="highlighted-text">Rajat</span>
+              Hello, I'M <span className="highlighted-text">Rajat Gupta</span>
             </span>
           </div>
           <div className="profile-details-role">

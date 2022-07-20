@@ -5,8 +5,6 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Header.css";
 export default function Header() {
-  
-  
   const [selectedScreen, setSelectedScreen] = useState(0);
   const [showHeaderOptions, setShowHeaderOptions] = useState(false);
 
@@ -23,22 +21,26 @@ export default function Header() {
     return TOTAL_SCREENS.map((Screen, i) => (
       <div
         key={Screen.screen_name}
-        className={getHeaderOptionsClasses(i)}
-        onClick={() => switchScreen(i, Screen)}
+        className="header-option-seperator header-option selct-option"
+onClick={Screen.screen_name==="Home" ? window.location.reload.bind(window.location): () => switchScreen(i, Screen)}
       >
-        <span>{
-          Screen.screen_name==="AboutMe"? "About  Me": Screen.screen_name==="ContactMe" ? "Contact  Me" : Screen.screen_name
-            
-          }</span>
+        <span>
+          {Screen.screen_name === "AboutMe"
+            ? "About  Me"
+            : Screen.screen_name === "ContactMe"
+            ? "Contact  Me"
+            : Screen.screen_name}
+        </span>
       </div>
     ));
   };
 
   const getHeaderOptionsClasses = (index) => {
-    let classes = "header-option ";
+    let classes = "header-option";
     if (index < TOTAL_SCREENS.length - 1) classes += "header-option-seperator ";
 
-    if (selectedScreen === index) classes += "selected-header-option";
+    // if (selectedScreen === index)
+    // classes += "selected-header-option";
 
     return classes;
   };
@@ -70,9 +72,7 @@ export default function Header() {
         >
           <FontAwesomeIcon className="header-hamburger-bars" icon={faBars} />
         </div>
-        <div className="header-logo">
-          {/* <span>logo</span> */}
-        </div>
+        <div className="header-logo">{/* <span>logo</span> */}</div>
         <div
           className={
             showHeaderOptions

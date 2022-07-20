@@ -79,6 +79,9 @@ export default function ContactMe(props) {
               <a href="https://github.com/rajat6235">
                 <i className="fa fa-github"></i>
               </a>
+              <a href="tel:7837733549"> 
+              <i className="fa fa-phone"></i>
+               </a>
         </div>
         <div className="back-form">
           <div className="img-back">

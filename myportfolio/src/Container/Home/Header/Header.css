@@ -5,6 +5,10 @@
     color: var(--white);
 
 }
+.selct-option :hover{
+    color: #ff5823;
+
+}
 .header-parent{
     display: flex;
     align-items: center;

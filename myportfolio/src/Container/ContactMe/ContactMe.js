@@ -115,7 +115,10 @@ export default function ContactMe(props) {
           </form>
         </div>
       </div>
-      <Footer/>
+
+  <div className="trademark-text">
+  Designed & Developed by Rajat Gupta
+</div>
     </div>
   );
 }

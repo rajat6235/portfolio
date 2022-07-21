@@ -44,7 +44,7 @@ export default function Resume(props) {
     { label: "Work History ", logoSrc: "work-history.svg" },
     { label: "Programming Skills", logoSrc: "programming-skills.svg" },
     { label: "Projects", logoSrc: "projects.svg" },
-    { label: "Interests", logoSrc: "interests.svg" },
+    { label: "Additional Skills", logoSrc: "interests.svg" },
   ];
 
   const programmingSkillsDetails = [
@@ -178,16 +178,20 @@ export default function Resume(props) {
 
       <div className="resume-screen-container" key="interests">
         <ResumeHeading
-          heading="Gyming"
-          description="Apart from being tech ethusiast and coder, I also love to work-out in gym and stay fit."
+          heading="Communication & Interpersonal skills"
+          description="Have the ability to communicate the desired message effectively while keeping the listener engaged."
         />
         <ResumeHeading
-          heading="Cooking"
-          description="I like to cook healthy food."
+          heading="Leadership & Management skills"
+          description="Skilled in organising other people to reach a shared goal and keep the team motivated to reach the desired goal. Can organise and communicate clearly to support a team or project."
         />
         <ResumeHeading
-          heading="Competitive Gaming"
-          description="I like to challenge my reflexes a lot while playing competitive games."
+          heading="Quick & Visual Learner"
+          description="I am a very strong visual learner and am determined to solve problems and quickly find an effective solution."
+        />
+        <ResumeHeading
+          heading="Effective Problem Solver"
+          description="I have the capability to solve problems and determining the cause of the problem. Identifying, prioritizing, and selecting alternatives for a solution and implementing a solution."
         />
     </div>,
   ];

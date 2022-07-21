@@ -70,17 +70,14 @@ export default function ContactMe(props) {
           <h2 className="title">
             <Typical loop={Infinity} steps={["Get In Touch 📧", 1000]} />
           </h2>{" "}
-          <a href="https://www.facebook.com/rajat6235">
-                <i className="fa fa-facebook-square"></i>
-              </a>
-              <a href="https://www.instagram.com/rajat6235">
-                <i className="fa fa-instagram"></i>
+          <a href="https://www.linkedin.com/in/rajat6235/">
+                <i  title="Linkedin" className="fa fa-linkedin"></i>
               </a>
               <a href="https://github.com/rajat6235">
-                <i className="fa fa-github"></i>
+                <i  title="Github" className="fa fa-github"></i>
               </a>
               <a href="tel:7837733549"> 
-              <i className="fa fa-phone"></i>
+              <i  title="Phone" className="fa fa-phone"></i>
                </a>
         </div>
         <div className="back-form">

@@ -97,10 +97,10 @@ export default function Resume(props) {
         toDate={"2013"}
       />
       <ResumeHeading
-        heading={"PML S.D public school, Chandigarh"}
-        subHeading={"Class 12th non-medical science (CBSE))"}
-        fromDate={"2012"}
-        toDate={"2013"}
+        heading={"Doon International school, Mohali"}
+        subHeading={"Class 10th (CBSE))"}
+        fromDate={"2010"}
+        toDate={"2011"}
       />
     </div>,
 
@@ -109,8 +109,8 @@ export default function Resume(props) {
       <ResumeHeading
         heading={"Proelio Technologies"}
         subHeading={"Front End Developer"}
-        fromDate={"2021"}
-        toDate={"2022"}
+        fromDate={"28 July, 2021"}
+        toDate={"3 March, 2022"}
       />
       <div className="experience-description">
         <span className="resume-description-text">

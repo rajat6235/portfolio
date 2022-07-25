@@ -63,7 +63,7 @@ export default function Resume(props) {
       duration: { fromDate: "2020", toDate: "2021" },
       description:
 "A Personal Portfolio website to showcase all my details and projects at one place",
-      subHeading: " Technologies Used : React JS, Bootstrapef",
+      subHeading: " Technologies Used : React JS, Bootstrap",
     },
     {
       title: "Personal Portfolio Website",
@@ -85,7 +85,7 @@ export default function Resume(props) {
     <div className="resume-screen-container" key="education">
       <ResumeHeading
         heading={"U.I.E.T Panjab University, Chandigarh"}
-        subHeading={"BACHELOR'S OF ENGINEERING IN INFORMATION TECHNOLOGY"}
+        subHeading={"Bachelor's of Engineering in Information Technology"}
         fromDate={"2013"}
         toDate={"2017"}
       />
@@ -112,11 +112,11 @@ export default function Resume(props) {
         fromDate={"28 July, 2021"}
         toDate={"3 March, 2022"}
       />
-      <div className="experience-description">
+      {/* <div className="experience-description">
         <span className="resume-description-text">
           Worked as Front End Developer
         </span>
-      </div>
+      </div> */}
       <div className="experience-description">
         <span className="resume-decription-text">
           - Worked on company's multiple products like Vectio Home- Health and
@@ -176,15 +176,15 @@ export default function Resume(props) {
         ))}
       </div>,
 
-      <div className="resume-screen-container" key="interests">
+      <div className="resume-screen-container additionalskills" key="interests">
         <ResumeHeading
           heading="Communication & Interpersonal skills"
-          description="Have the ability to communicate the desired message effectively while keeping the listener engaged."
+          description="Have the ability to communicate the desired message effectively while keeping the listener engaged. Can organise and communicate clearly to support a team or project."
         />
-        <ResumeHeading
+        {/* <ResumeHeading
           heading="Leadership & Management skills"
-          description="Skilled in organising other people to reach a shared goal and keep the team motivated to reach the desired goal. Can organise and communicate clearly to support a team or project."
-        />
+          description="Skilled in organising other people to reach a shared goal and keep the team motivated to reach the desired goal.Can organise and communicate clearly to support a team or project."
+        /> */}
         <ResumeHeading
           heading="Quick & Visual Learner"
           description="I am a very strong visual learner and am determined to solve problems and quickly find an effective solution."

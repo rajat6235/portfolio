@@ -31,7 +31,7 @@
   max-width: 100%;
 }
 
-.experience-description-text{
+.experience-description-text {
   font-size: 12px;
 }
 
@@ -107,8 +107,8 @@
   display: flex;
   justify-content: space-between;
 }
-.resume-main-heading span{
-  color:var(--dark-orange);
+.resume-main-heading span {
+  color: var(--dark-orange);
   font-size: 16px;
   font-family: "Poppins SemiBold";
 }
@@ -119,67 +119,67 @@
   height: 15px;
   width: 15px;
   top: 5px;
-  background-color:#ff5823;
+  background-color: #ff5823;
   border-radius: 50%;
 }
 
-.resume-sub-heading{
-    font-size: 14px;
-    font-family: "Poppin SemiBold";
-    color:black;
-    font-weight: 550;
-    margin: 10px 0 0 0;
+.resume-sub-heading {
+  font-size: 14px;
+  font-family: "Poppin SemiBold";
+  color: black;
+  font-weight: 550;
+  margin: 10px 0 0 0;
 }
 
-.resume-heading-description{
-    font-size: 12px;
-    text-align: justify;
+.resume-heading-description {
+  font-size: 12px;
+  text-align: justify;
 }
 
-.heading-date{
-  background-color:#ff5823;
+.heading-date {
+  background-color: #ff5823;
   padding: 4px 12px;
   font-size: 14px;
-border-radius: 14px;
-color: white;
+  border-radius: 14px;
+  color: white;
 }
 
-.skill-parent{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width: 50%;
+.skill-parent {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 50%;
 }
-.programming-skills-container{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+.programming-skills-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
-.skill-percentage{
-    position: relative;
-    height: 15px;
-    width: 70%;
+.skill-percentage {
+  position: relative;
+  height: 15px;
+  width: 70%;
   background-color: #ff5823;
 }
 
-.skill-percentage .active-percentage-bar{
-height: 15px;
-transition: 0.8s ease;
-position: absolute;
-background-color: #1f2235;
+.skill-percentage .active-percentage-bar {
+  height: 15px;
+  transition: 0.8s ease;
+  position: absolute;
+  background-color: #1f2235;
 }
 
 .skill-parent span {
-    font-family: "Poppins SemiBold";
-    font-size: 16px;
+  font-family: "Poppins SemiBold";
+  font-size: 16px;
 }
 @media only screen and (max-width: 1110px) {
-  .resume-card{
+  .resume-card {
     width: 880px;
   }
-  .resume-bullet-details{
+  .resume-bullet-details {
     padding: 0 0 0 70px;
   }
 }
@@ -220,35 +220,60 @@ background-color: #1f2235;
   }
 }
 @media only screen and (max-width: 414px) {
-  .heading-date{
-  padding: 1vw 1.6vw;
-  font-size: 3.5vw;
-  white-space: nowrap;
-  max-height: 6.5vw;
+  .heading-date {
+    padding: 1vw 1.6vw;
+    font-size: 3.5vw;
+    white-space: nowrap;
+    max-height: 6.5vw;
+  }
+  .resume-main-heading span {
+    font-size: 4.2vw;
+  }
+  .experience-description {
+    font-size: 3.5vw;
+  }
+  .resume-sub-heading {
+    font-size: 3.8vw;
+  }
+  .heading-bullet {
+    display: none;
+  }
+  .resume-heading-description {
+    font-size: 3.5vw;
+  }
+  .skill-parent span {
+    font-size: 4.2vw;
+  }
 }
-  .resume-main-heading span{
-    font-size: 4.2vw;}
-    .experience-description {
-      font-size: 3.5vw;
-    }
-    .resume-sub-heading {
-      font-size: 3.8vw;}
-.heading-bullet{
-  display: none;
-}
-.resume-heading-description{
-  font-size: 3.5vw;
-}
-/* .additionalskills{
-  padding-top: 18px;
-} */
-.skill-parent span {
-  font-size: 4.2vw;
-}
+@media only screen and (max-width: 520px) {
+  .heading-date {
+    padding: 4.12px 6.5px;
+    font-size: 14.4px;
+    white-space: nowrap;
+    max-height: 26.7px;
+  }
+  .resume-main-heading span {
+    font-size: 18.3px;
+  }
+  .experience-description {
+    font-size: 14.4px;
+  }
+  .resume-sub-heading {
+    font-size: 15.65px;
+  }
+  .heading-bullet {
+    display: none;
+  }
+  .resume-heading-description {
+    font-size:14.4px;
+  }
+  .skill-parent span {
+    font-size: 17.3px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
-  .heading-bullet{
+  .heading-bullet {
     display: none;
   }
 }

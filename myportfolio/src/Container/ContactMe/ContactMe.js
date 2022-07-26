@@ -74,7 +74,7 @@ export default function ContactMe(props) {
                 <i  title="Linkedin" className="fa fa-linkedin"></i>
               </a>
               <a href="https://github.com/rajat6235">
-                <i  title="Github" className="fa fa-github"></i>
+                <i  title="Github" className="fa-brands fa-github"></i>
               </a>
               <a href="tel:7837733549"> 
               <i  title="Phone" className="fa fa-phone"></i>
@@ -115,6 +115,7 @@ export default function ContactMe(props) {
 
   <div className="trademark-text">
   Designed & Developed by Rajat Gupta
+  <i className="fa-solid fa-hand-peace" ></i>
 </div>
     </div>
   );

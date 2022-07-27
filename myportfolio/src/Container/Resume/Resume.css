@@ -221,28 +221,28 @@
 }
 @media only screen and (max-width: 414px) {
   .heading-date {
-    padding: 1vw 1.6vw;
-    font-size: 3.5vw;
-    white-space: nowrap;
-    max-height: 6.5vw;
+    padding: 1vw 1.6vw !important;
+    font-size: 3.5vw !important;
+    white-space: nowrap !important;
+    max-height: 6.5vw !important;
   }
   .resume-main-heading span {
-    font-size: 4.2vw;
+    font-size: 4.2vw !important;
   }
   .experience-description {
-    font-size: 3.5vw;
+    font-size: 3.5vw !important;
   }
   .resume-sub-heading {
-    font-size: 3.8vw;
+    font-size: 3.8vw !important;
   }
   .heading-bullet {
     display: none;
   }
   .resume-heading-description {
-    font-size: 3.5vw;
+    font-size: 3.5vw !important;
   }
   .skill-parent span {
-    font-size: 4.2vw;
+    font-size: 4.2vw !important;
   }
 }
 @media only screen and (max-width: 520px) {

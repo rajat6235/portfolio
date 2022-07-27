@@ -62,21 +62,21 @@ export default function Resume(props) {
       title: "Personal Portfolio Website",
       duration: { fromDate: "2020", toDate: "2021" },
       description:
-"A Personal Portfolio website to showcase all my details and projects at one place",
+"A Personal Portfolio website to showcase all my details and projects at one place.",
       subHeading: " Technologies Used : React JS, Bootstrap",
     },
     {
       title: "Personal Portfolio Website",
       duration: { fromDate: "2020", toDate: "2021" },
       description:
-        "A Personal Portfolio website to showcase all my details and projects at one place",
+        "A Personal Portfolio website to showcase all my details and projects at one place.",
       subHeading: " Technologies Used : React JS, Bootstrap",
     },
     {
       title: "Personal Portfolio Website",
       duration: { fromDate: "2020", toDate: "2021" },
       description:
-        "A Personal Portfolio website to showcase all my details and projects at one place",
+        "A Personal Portfolio website to showcase all my details and projects at one place.",
       subHeading: " Technologies Used : React JS, Bootstrap",
     },
   ];
@@ -139,7 +139,7 @@ export default function Resume(props) {
         <br />
         <span className="resume-decription-text">
           - Improved the performance of the existing products by refactoring
-          legacy code
+          legacy code.
         </span>
         <br/>
       </div>

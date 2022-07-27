@@ -14,6 +14,10 @@
     max-width: 100%;
     height: 130px;
 }
+@media only screen and (max-width: 520px) {
+    .footer-parent img {
+        height: 12vh;
+}}
 @media only screen and (max-width:1110px) {
     .footer-parent{
         display: flex;

@@ -6,7 +6,7 @@
   padding: 10px;
   display: flex;
   border-radius: 12px;
-  margin: 0 auto;
+  margin: 0 10px;
   flex-direction: column;
   background-color: #1f2235;
 }
@@ -123,6 +123,8 @@ button .load img{
   color: rgb(123, 127, 146);
   text-align: center;
   padding:3px;
+  margin-bottom: -2px;
+  margin-top: 30px;
 }
 @media screen and (min-width: 940px) {
   .back-form {

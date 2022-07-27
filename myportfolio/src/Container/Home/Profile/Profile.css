@@ -115,6 +115,7 @@ transition: 1s ease-in;
     .profile-options{
         display: flex;
         justify-content: space-between;
+        margin: 0 13px;
     }
     .profile-details{
         margin: 25px 0 0;
@@ -131,6 +132,9 @@ transition: 1s ease-in;
     .profile-details-role h1 {
         font-size: 38px;
     }
+    .profile-options{
+        margin: 0 13px;
+    }
     .profile-options .btn {
         font-size: 12px ;
     }
@@ -144,6 +148,9 @@ transition: 1s ease-in;
     .profile-details{
         width: 90%;
     }
+    .profile-options{
+        margin: 0 13px;
+    }
     .profile-options .btn {
         font-size: 12px ;
     }
@@ -155,6 +162,9 @@ transition: 1s ease-in;
     .profile-details-role h1 {
         font-size: 31px;
     }
+    .profile-options{
+        margin: 0 13px;
+    }
     .profile-options .btn {
         font-size: 12px ;
     }
@@ -162,6 +172,9 @@ transition: 1s ease-in;
 @media screen and (max-width:320px){
     .profile-details-role h1 {
         font-size: 28px;
+    }
+    .profile-options{
+        margin: 0 13px;
     }
     .profile-options .btn {
         font-size: 12px ;

@@ -73,6 +73,9 @@ onClick={Screen.screen_name==="Home" ? window.location.reload.bind(window.locati
           <FontAwesomeIcon className="header-hamburger-bars" icon={faBars} />
         </div>
         <div className="header-logo">{/* <span>logo</span> */}</div>
+      
+
+             
         <div
           className={
             showHeaderOptions
@@ -80,8 +83,12 @@ onClick={Screen.screen_name==="Home" ? window.location.reload.bind(window.locati
               : "header-options "
           }
         >
+          <div className={  showHeaderOptions
+              ? "options_container "
+              : "header-options"}>
           {getHeaderOptions()}
         </div>
+         </div>
       </div>
     </div>
   );

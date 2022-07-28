@@ -1,5 +1,5 @@
 .main-container {
-  min-height: 100vh;
+  min-height: auto;
 }
 .central-form {
   max-width: 1100px;
@@ -116,7 +116,7 @@ button .load img{
   transform: scale(1.5);
 }
 .trademark-text{
-  position: absolute;
+  position: inherit ;
   bottom: 0;
   width: 100%;
   background-color: #1f2235;

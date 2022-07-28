@@ -43,6 +43,11 @@
     color: #ff5823
 }
 
+    .options_container{
+        display: flex;
+        align-items: center;
+    }
+
 @media only screen and (max-width:1110px) {
     .header-parent{
         width: 80%;
@@ -97,6 +102,7 @@
     }
     .header-option{
         color: var(--white);
+        font-size: 4.2vw;
 
     }
     .header-hamburger-bars{

@@ -63,7 +63,7 @@ onClick={Screen.screen_name==="Home" ? window.location.reload.bind(window.locati
   return (
     <div
       className="header-container"
-      onClick={() => setShowHeaderOptions(!showHeaderOptions)}
+      onClick={() => showHeaderOptions ? setShowHeaderOptions(!showHeaderOptions) : ""}
     >
       <div className="header-parent ">
         <div

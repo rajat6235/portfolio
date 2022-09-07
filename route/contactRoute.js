@@ -10,6 +10,9 @@ router.post("/contact", (req, res) => {
   ) {
     return res.json({ msg: "please fill all the fields" });
   }
+  if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(data.email)) {
+    return res.json({ msg: "Please enter a valid email id" });
+  }
 
   let smtpTransporter = nodemailer.createTransport({
     service: "Gmail",

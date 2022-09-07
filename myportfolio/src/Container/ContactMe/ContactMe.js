@@ -48,7 +48,13 @@ export default function ContactMe(props) {
         setBanner(res.data.msg);
         toast.error(res.data.msg);
         setBool(false);
-      } else if (res.status === 200) {
+      }
+      else if  (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))
+      {  
+        toast.error(res.data.msg);
+        setBool(false);
+       } 
+      else if (res.status === 200) {
         setBanner(res.data.msg);
         toast.success(res.data.msg);
         setBool(false);

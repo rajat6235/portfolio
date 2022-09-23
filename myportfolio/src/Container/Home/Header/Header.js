@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { GET_SCREEN_INDEX, TOTAL_SCREENS } from "../../../utilities/comman";
 import ScrollService from "../../../utilities/ScrollService";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import rglogo1 from "../../../images/rglogo1.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Header.css";
 export default function Header() {
@@ -72,7 +73,8 @@ onClick={Screen.screen_name==="Home" ? window.location.reload.bind(window.locati
         >
           <FontAwesomeIcon className="header-hamburger-bars" icon={faBars} />
         </div>
-        <div className="header-logo">{/* <span>logo</span> */}</div>
+        <div ><span> <img className="header-logo"src={rglogo1} alt="not found" />
+</span></div>
       
 
              

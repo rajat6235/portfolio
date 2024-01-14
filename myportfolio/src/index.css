@@ -67,10 +67,11 @@ code {
 ::-webkit-scrollbar {
   width: 6px !important;
   height: 6px !important;
+  background-color: white;
 }
 
 body ::-webkit-scrollbar-thumb {
-  background-color: hsla(0, 0%, 100%, 0.16);
+  background-color: #cccccc;
 }
 
 ::-webkit-scrollbar-thumb {

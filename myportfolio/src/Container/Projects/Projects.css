@@ -1,0 +1,122 @@
+.projects-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0 0 0;
+}/* Projects.css */
+.projects-parent{
+    max-width: 1000px;
+    width: 70%;
+}
+.slider{
+    width: 45%;
+}
+.images{
+ width: 100%;
+  height: 70vh;
+  object-fit:contain;
+}
+.single-project{
+    display: flex;
+    column-gap: 50px;
+    align-items: start;
+    font-size: 14px;
+    min-height: 460px;
+    margin-bottom: 50px;
+
+}
+.slider-container {
+    position: relative;
+  }
+  
+  .image-container {
+    position: relative;
+  }
+  
+  .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff; /* Text color */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .image-container:hover .image-overlay {
+    opacity: 1;
+  }
+  
+.slick-next:before, .slick-prev:before {
+    color: #000;
+}
+.center .slick-center h3 {
+    color: #e67e22;
+    opacity: 1;
+    -ms-transform: scale(1.08);
+    transform: scale(1.08);
+}
+.center h3 {
+    transition: all .10s ease;
+}
+.subHeading_p1{
+    font-size: 15px;
+    font-weight: 900;
+    text-decoration: underline;
+}
+.description{
+    font-size: 14px;
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .projects-parent{
+        width: 880px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .projects-parent{
+        width: 90%;
+    }
+    .single-project{
+        column-gap: 30px;
+    }
+}
+@media only screen and (max-width: 580px) {
+    .projects-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 50px 0 0 0;
+    }/* Projects.css */
+    .projects-parent{
+        max-width: 1000px;
+        width: 85%;
+    }
+    .slider{
+        width: 100%;
+        height: fit-content;
+        margin-bottom: 40px;
+    }
+    .images{
+        height: auto;
+    }
+    .project-title{
+       font-size: 22px;     
+    }
+        .sub-title{
+            font-size: 18px;
+        }
+    .single-project{
+        display: flex;
+        flex-direction: column;
+    }
+}

@@ -14,7 +14,7 @@ export default function AboutMe(props) {
 
   const SCREEN_CONSTANTS = {
     description:
-      "I'm a Full Stack web developer based in Mohali,Punjab India. With a speciality in Front End Development. I possess a vast array of knowledge in many different front end and back end languages, responsive frameworks and databases management systems. My objective is simply to be the best web developer that I can be and to contribute to the technology industry.",
+      "I am a highly skilled Full Stack Web Developer, currently based in Mohali, Punjab, India. My primary focus is on Front-End Development, and I bring a comprehensive understanding of various front-end and back-end languages, responsive frameworks, and database management systems. I aspire to excel in the field of web development and make impactful contributions to the ever-evolving technology industry.",
     highlights: {
       bullets: [
         "Full stack Web and mobile development",

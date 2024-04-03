@@ -1,9 +1,9 @@
 .title-message {
     position: absolute;
     width: 100%;
-    top: 50%; /* Position at the vertical center */
-    left: 50%; /* Position at the horizontal center */
-    transform: translate(-50%, -50%); /* Center the element */
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -55%);
   
     z-index: 1;
     text-align: center;

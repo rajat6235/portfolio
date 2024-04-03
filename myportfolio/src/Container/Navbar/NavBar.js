@@ -51,7 +51,7 @@ const NavBar = () => {
         className="animate-navbar nav-theme justify-content-between"
         variant="dark"
       >
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
           <img className="logo" src={rglogo1} alt="Logo" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />

@@ -93,6 +93,7 @@ const Projects = (props) => {
         <ScreenHeading title={"Projects"} subHeading={"Work history"} />
         <div className="single-project">
         <div className="slider">
+          <div>
             <Slider {...settings}>
               {troveImg.map((image, index) => (
                 <div
@@ -111,6 +112,10 @@ const Projects = (props) => {
                 </div>
               ))}
             </Slider>
+            </div>
+            <span>
+              esfw
+            </span>
           </div>
           <div className="description-container" style={{ width: "100%" }}>
             <h4 className="project-title"> Tr0ve</h4>

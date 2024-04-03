@@ -59,7 +59,7 @@
   }
 @media only screen and (max-width: 580px) {
     .modal-base {
-        width: 90%;
+        width: 100%;
         height: auto;
     }
 }

@@ -5,7 +5,10 @@ import ScrollService from "../../utilities/ScrollService";
 
 const TitleMessage = () => (
   <div className="title-message">
-    <div className="profile-details" style={{display:'flex',alignItems:'center',flexDirection:'column'}}>
+    <div
+      className="profile-details"
+      style={{ display: "flex", alignItems: "center", flexDirection: "column" }}
+    >
       <div className="colz">
         <div className="colz-icon">
           <a href="https://www.linkedin.com/in/rajat6235/">
@@ -44,10 +47,13 @@ const TitleMessage = () => (
               }}
             />
           </h1>
-          <div className="profile-role-tagline" >
-            Experienced in building robust applications with frontend
-            excellence, continuously refining backend skills to create
-            comprehensive solutions.{" "}
+          <div
+            className="profile-role-tagline"
+            style={{ backgroundColor: "rgba(0, 0, 0, 0.16)", padding: "10px" }}
+          >
+            Experienced in crafting robust applications with frontend
+            excellence, advancing backend capabilities through practical
+            application to create comprehensive solutions.{" "}
           </div>
         </span>
       </div>

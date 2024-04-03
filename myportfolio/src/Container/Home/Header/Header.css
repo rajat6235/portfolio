@@ -3,6 +3,7 @@
     justify-content: center;
     height: 140px;
     color: var(--white);
+    background-color:  rgba(16,16,24,.89);
 
 }
 .selct-option :hover{

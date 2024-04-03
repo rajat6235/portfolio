@@ -1,7 +1,8 @@
 .home-container{
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 670px;
-    background-color: #23263B;
+    /* display:flex; */
+    position: relative;
+    /* flex-direction: column; */
+    /* justify-content: space-between; */
+    /* min-height: 670px; */
+    /* background-color: #23263B; */
 }

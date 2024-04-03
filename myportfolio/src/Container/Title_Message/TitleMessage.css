@@ -1,0 +1,27 @@
+.title-message {
+    position: absolute;
+    width: 100%;
+    top: 18rem;
+    z-index: 1;
+    text-align: center;
+  }
+  
+  .title-message strong {
+    font-size: 1.25em;
+  }
+  
+  .title-message div {
+    color: #fff; /* Assuming white color */
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+    font-weight: 100;
+  }
+  
+  .title-message .main {
+    font-size: 50px;
+  }
+  
+  .title-message .sub {
+    font-size: 27px;
+    letter-spacing: 2px;
+  }
+  

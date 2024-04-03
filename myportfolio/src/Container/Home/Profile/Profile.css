@@ -33,6 +33,7 @@
 }
 .profile-role-tagline{
     font-size: 19px;
+    max-width: 50vw;
     margin: 5px 0 0 0;
     font-family: "Poppins Light";
 
@@ -117,7 +118,10 @@ transition: 1s ease-in;
         margin: 0 13px;
     }
     .profile-details{
-        margin: 25px 0 0;
+        margin: 5px;
+    }
+    .profile-role-tagline{
+        max-width: 100%
     }
     .profile-options .highlighted-btn{
         margin: 0 !important;

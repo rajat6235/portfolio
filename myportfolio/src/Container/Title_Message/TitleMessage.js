@@ -57,7 +57,7 @@ const TitleMessage = () => (
           </div>
         </span>
       </div>
-      <div className="profile-options">
+      <div className="profile-options" style={{columnGap:'70px'}}>
         <button
           className="btn primary-btn"
           onClick={() => ScrollService.scrollHandler.scrollToHireMe()}

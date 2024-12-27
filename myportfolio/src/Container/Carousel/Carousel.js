@@ -47,9 +47,9 @@ const CustomCarousel = ({ loading, setLoading }) => {
 			{loading && (
 				<div className='loader-container'>
 					<div className='loader'>
-						{' '}
 						<span>{`{`}</span>
 						<span> {`}`}</span>
+						<div className="loader-text">Loading...</div> 
 					</div>
 				</div>
 			)}

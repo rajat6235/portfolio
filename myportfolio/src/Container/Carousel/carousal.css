@@ -36,12 +36,22 @@
 
   span {
     display: inline-block;
-    animation: pulse 0.2s alternate infinite ease-in-out;
+    animation: pulse 0.3s alternate infinite ease-in-out;
 
     &:nth-child(odd) {
-      animation-delay: 0.2s;
+      animation-delay: 0.3s;
     }
   }
+}
+.loader-text {
+  position: absolute;
+  top: 51%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.8vh;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
 }
 
 @keyframes pulse {

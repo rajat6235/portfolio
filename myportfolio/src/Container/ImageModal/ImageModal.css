@@ -1,11 +1,11 @@
 .modal-base {
-    top: 5%;
+    top: 10%;
     position: relative;
     background-color: #fefefe;
     margin: auto;
     padding: 0;
     border: 1px solid #888;
-    width: 70%;
+    width: 80%;
     height: 75%;
     opacity: 0;
     -webkit-transition: all 0.2s ease-in-out;
@@ -29,6 +29,7 @@
     padding: 0;
     background-color: transparent;
     border: 0;
+    margin-bottom:10px;
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 1;
@@ -59,7 +60,11 @@
   }
 @media only screen and (max-width: 580px) {
     .modal-base {
-        width: 100%;
+        width: 68vh;
         height: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(90deg)
+
     }
 }

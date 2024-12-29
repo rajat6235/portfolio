@@ -2,7 +2,8 @@ import React from "react";
 import Typical from "react-typical";
 import ScrollService from "../../../utilities/ScrollService.ts";
 import "./Profile.css";
-export default function Profile() {
+
+const Profile: React.FC = () => {
   return (
     <div className="profile-container">
       <div className="profile-parent">
@@ -10,14 +11,14 @@ export default function Profile() {
           <div className="colz">
             <div className="colz-icon">
               <a href="https://www.linkedin.com/in/rajat6235/">
-                <i  title="Linkedin" className="fa fa-linkedin"></i>
+                <i title="Linkedin" className="fa fa-linkedin"></i>
               </a>
               <a href="https://github.com/rajat6235">
-                <i  title="Github" className="fa fa-github"></i>
+                <i title="Github" className="fa fa-github"></i>
               </a>
-              <a href="tel:7837733549"> 
-              <i  title="Phone" className="fa fa-phone"></i>
-               </a>
+              <a href="tel:7837733549">
+                <i title="Phone" className="fa fa-phone"></i>
+              </a>
             </div>
           </div>
           <div className="profile-details-name">
@@ -27,13 +28,11 @@ export default function Profile() {
             </span>
           </div>
           <div className="profile-details-role">
-            <span className="primary- text">
-              {" "}
+            <span className="primary-text">
               <h1>
-                {" "}
                 <Typical
                   steps={[
-                    "Ethusiastic Developer 🛑 ",
+                    "Enthusiastic Developer 🛑 ",
                     2000,
                     "React Developer 💻 ",
                     2000,
@@ -42,8 +41,6 @@ export default function Profile() {
                   ]}
                   wrapper="p"
                   loop={Infinity}
-
-
                 />
               </h1>
               <span className="profile-role-tagline">
@@ -52,9 +49,12 @@ export default function Profile() {
             </span>
           </div>
           <div className="profile-options">
-            <button className="btn primary-btn" 
-            onClick={()=>ScrollService.scrollHandler.scrollToHireMe()}
-            >Hire Me</button>
+            <button
+              className="btn primary-btn"
+              onClick={() => ScrollService.scrollHandler.scrollToHireMe()}
+            >
+              Hire Me
+            </button>
             <a href="RajatGuptaResume2022.pdf" download="RajatGuptaResume2022.pdf">
               <button className="btn highlighted-btn">Download CV</button>
             </a>
@@ -66,4 +66,6 @@ export default function Profile() {
       </div>
     </div>
   );
-}
+};
+
+export default Profile;

@@ -5,7 +5,7 @@ import axios from "axios";
 import imgBack from "../../../src/images/mailz.jpeg";
 import load1 from "../../../src/images/load2.gif";
 import ScreenHeading from "../../utilities/ScreenHeadings/ScreenHeading.tsx";
-import ScrollService from "../../utilities/ScrollService";
+import ScrollService from "../../utilities/ScrollService.ts";
 import Animations from "../../utilities/Animations.ts";
 import Footer from "../Home/Footer/Footer";
 import "./ContactMe.css";

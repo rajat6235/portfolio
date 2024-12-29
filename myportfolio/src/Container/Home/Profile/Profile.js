@@ -1,6 +1,6 @@
 import React from "react";
 import Typical from "react-typical";
-import ScrollService from "../../../utilities/ScrollService";
+import ScrollService from "../../../utilities/ScrollService.ts";
 import "./Profile.css";
 export default function Profile() {
   return (

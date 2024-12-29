@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import ScrollService from '../../utilities/ScrollService';
+import ScrollService from '../../utilities/ScrollService.ts';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import rglogo1 from '../../images/rglogo1.png';
-import { GET_SCREEN_INDEX, TOTAL_SCREENS } from '../../utilities/comman';
+import { GET_SCREEN_INDEX, TOTAL_SCREENS } from '../../utilities/comman.ts';
 import './NavBar.css';
 
 const NavBar = () => {

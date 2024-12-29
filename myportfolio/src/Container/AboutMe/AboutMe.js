@@ -1,6 +1,6 @@
 import React from "react";
 import ScreenHeading from "../../utilities/ScreenHeadings/ScreenHeading.tsx";
-import ScrollService from "../../utilities/ScrollService";
+import ScrollService from "../../utilities/ScrollService.ts";
 import Animations from "../../utilities/Animations.ts";
 import "./AboutMe.css";
 

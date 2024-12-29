@@ -1,7 +1,7 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
 import "./TitleMessage.css"; // Import the external CSS file
-import ScrollService from "../../utilities/ScrollService";
+import ScrollService from "../../utilities/ScrollService.ts";
 
 const TitleMessage = () => (
   <div className="title-message">

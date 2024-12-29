@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "./Projects.css";
 import ScreenHeading from "../../utilities/ScreenHeadings/ScreenHeading.tsx";
 import Animations from "../../utilities/Animations.ts";
-import ScrollService from "../../utilities/ScrollService";
+import ScrollService from "../../utilities/ScrollService.ts";
 import ImageModal from "../ImageModal/ImageModal.tsx";
 import { projectData } from "./ProjectsData.tsx";
 

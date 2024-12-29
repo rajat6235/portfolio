@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Projects.css";
-import ScreenHeading from "../../utilities/ScreenHeadings/ScreenHeading";
+import ScreenHeading from "../../utilities/ScreenHeadings/ScreenHeading.tsx";
 import Animations from "../../utilities/Animations.ts";
 import ScrollService from "../../utilities/ScrollService";
 import ImageModal from "../ImageModal/ImageModal.tsx";

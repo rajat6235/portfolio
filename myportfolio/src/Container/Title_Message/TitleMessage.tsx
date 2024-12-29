@@ -1,9 +1,9 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
-import "./TitleMessage.css"; // Import the external CSS file
+import "./TitleMessage.css";
 import ScrollService from "../../utilities/ScrollService.ts";
 
-const TitleMessage = () => (
+const TitleMessage: React.FC = () => (
   <div className="title-message">
     <div
       className="profile-details"
@@ -29,14 +29,12 @@ const TitleMessage = () => (
         </span>
       </div>
       <div className="profile-details-role">
-        <span className="primary- text">
-          {" "}
+        <span className="primary-text">
           <h1>
-            {" "}
             <Typewriter
               options={{
                 strings: [
-                  "Ethusiastic Developer 🛑",
+                  "Enthusiastic Developer 🛑",
                   "Tech Enthusiast",
                   "React Developer",
                   "Front End Developer ➬ ",
@@ -53,11 +51,11 @@ const TitleMessage = () => (
           >
             Experienced in crafting robust applications with frontend
             excellence, advancing backend capabilities through practical
-            application to create comprehensive solutions.{" "}
+            application to create comprehensive solutions.
           </div>
         </span>
       </div>
-      <div className="profile-options" style={{columnGap:'70px'}}>
+      <div className="profile-options" style={{ columnGap: '70px' }}>
         <button
           className="btn primary-btn"
           onClick={() => ScrollService.scrollHandler.scrollToHireMe()}
@@ -76,7 +74,6 @@ const TitleMessage = () => (
             style={{
               backgroundColor: "#ff5823",
               fontWeight: "400",
-              // border: "2px solid linen",
               color: "white",
               borderRadius: "50px",
             }}

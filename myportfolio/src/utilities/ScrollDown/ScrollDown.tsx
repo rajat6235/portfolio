@@ -1,7 +1,7 @@
 import React from "react";
 import "./ScrollDown.css";
 
-const ScrollDown = () => {
+const ScrollDown: React.FC = () => {
   return (
     <div className="scroll-down">
       <div>

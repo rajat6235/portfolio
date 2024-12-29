@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import ScrollDown from '../../utilities/ScrollDown/ScrollDown';
+import ScrollDown from '../../utilities/ScrollDown/ScrollDown.tsx';
 import './carousal.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 

@@ -1,4 +1,4 @@
-import Home from "../Container/Home/Home";
+import Home from "../Container/Home/Home.tsx";
 import AboutMe from "../Container/AboutMe/AboutMe.tsx";
 import Resume from "../Container/Resume/Resume.tsx";
 import ContactMe from "../Container/ContactMe/ContactMe.tsx";

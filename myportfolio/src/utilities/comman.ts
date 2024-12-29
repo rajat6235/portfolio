@@ -1,13 +1,16 @@
 import Home from "../Container/Home/Home";
-import AboutMe from "../Container/AboutMe/AboutMe";
+import AboutMe from "../Container/AboutMe/AboutMe.tsx";
 import Resume from "../Container/Resume/Resume";
 import ContactMe from "../Container/ContactMe/ContactMe";
 import Projects from "../Container/Projects/Projects.tsx";
 
 // Define the type for a screen
-interface Screen {
+interface Screen<P = {}> {
   screen_name: string;
-  component: React.ComponentType;
+  component: React.ComponentType<P>;
+}
+interface AboutMeProps {
+  id: string;
 }
 
 export const TOTAL_SCREENS: Screen[] = [
@@ -17,7 +20,7 @@ export const TOTAL_SCREENS: Screen[] = [
   },
   {
     screen_name: "AboutMe",
-    component: AboutMe,
+    component: AboutMe as React.ComponentType<{}>,
   },
   {
     screen_name: "Resume",
@@ -25,11 +28,11 @@ export const TOTAL_SCREENS: Screen[] = [
   },
   {
     screen_name: "Projects",
-    component: Projects,
+    component: Projects as React.ComponentType<{}>,
   },
   {
     screen_name: "ContactMe",
-    component: ContactMe,
+    component: ContactMe as React.ComponentType<{}>,
   },
 ];
 

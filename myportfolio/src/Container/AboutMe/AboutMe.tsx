@@ -4,13 +4,23 @@ import ScrollService from "../../utilities/ScrollService.ts";
 import Animations from "../../utilities/Animations.ts";
 import "./AboutMe.css";
 
-export default function AboutMe(props) {
-  let fadeInScreenHandler = (screen) => {
+interface AboutMeProps {
+  id: string;
+}
+
+const AboutMe: React.FC<AboutMeProps> = (props) => {
+  const fadeInScreenHandler = (screen: { fadeInScreen: string }) => {
     if (screen.fadeInScreen !== props.id) return;
     Animations.animations.fadeInScreen(props.id);
   };
-  const fadeInSubscription =
-    ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
+
+  const fadeInSubscription = ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
+
+  React.useEffect(() => {
+    return () => {
+      fadeInSubscription.unsubscribe();
+    };
+  }, [fadeInSubscription]);
 
   const SCREEN_CONSTANTS = {
     description:
@@ -19,11 +29,11 @@ export default function AboutMe(props) {
       bullets: [
         "Full stack Web and mobile development",
         "Interactive Front End as per design",
-        "Redux for state mangement",
+        "Redux for state management",
         "Building Rest API",
         "Managing database",
       ],
-      heading: "Here are a Few Highlists:",
+      heading: "Here are a Few Highlights:",
     },
   };
 
@@ -35,11 +45,9 @@ export default function AboutMe(props) {
       </div>
     ));
   };
+
   return (
-    <div
-      className="about-me-container screen-container fade-in"
-      id={props.id || ""}
-    >
+    <div className="about-me-container screen-container fade-in" id={props.id || ""}>
       <div className="about-me-parent">
         <ScreenHeading title={"About Me"} subHeading={"Why Choose Me?"} />
         <div className="about-me-card">
@@ -73,4 +81,6 @@ export default function AboutMe(props) {
       </div>
     </div>
   );
-}
+};
+
+export default AboutMe;

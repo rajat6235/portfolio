@@ -20,7 +20,7 @@
 .single-project{
     display: flex;
     column-gap: 50px;
-    align-items: start;
+    align-items: flex-start;
     font-size: 14px;
     min-height: 460px;
     margin-bottom: 50px;

@@ -6,7 +6,7 @@ import "./Projects.css";
 import ScreenHeading from "../../utilities/ScreenHeadings/ScreenHeading";
 import Animations from "../../utilities/Animations";
 import ScrollService from "../../utilities/ScrollService";
-import ImageModal from "../ImageModal/ImageModal";
+import ImageModal from "../ImageModal/ImageModal.tsx";
 import { projectData } from "./ProjectsData";
 
 const Projects = (props) => {

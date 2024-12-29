@@ -1,12 +1,19 @@
-// ImageModal.js
+// ImageModal.tsx
 import React from 'react';
 import Modal from 'react-modal';
-import Slider from 'react-slick';
+import Slider, { Settings } from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './ImageModal.css';
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from 'react-icons/md';
-function NextArrow(props) {
+
+interface ArrowProps {
+	className?: string;
+	style?: React.CSSProperties;
+	onClick?: () => void;
+}
+
+function NextArrow(props: ArrowProps) {
 	const { className, style, onClick } = props;
 	return (
 		<MdKeyboardArrowRight
@@ -17,7 +24,7 @@ function NextArrow(props) {
 	);
 }
 
-function PrevArrow(props) {
+function PrevArrow(props: ArrowProps) {
 	const { className, style, onClick } = props;
 	return (
 		<MdKeyboardArrowLeft
@@ -27,8 +34,16 @@ function PrevArrow(props) {
 		/>
 	);
 }
-const ImageModal = ({ isOpen, onRequestClose, images, initialSlide }) => {
-	const settings = {
+
+interface ImageModalProps {
+	isOpen: boolean;
+	onRequestClose: () => void;
+	images: string[];
+	initialSlide: number;
+}
+
+const ImageModal: React.FC<ImageModalProps> = ({ isOpen, onRequestClose, images, initialSlide }) => {
+	const settings: Settings = {
 		dots: true,
 		infinite: true,
 		speed: 500,

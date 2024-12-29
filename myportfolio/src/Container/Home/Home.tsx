@@ -16,7 +16,9 @@ const Home: React.FC = () => {
       <NavBar />
       <CustomCarousel loading={loading} setLoading={setLoading} />
       {!loading && <TitleMessage />}
-      <Profile/>
+      <div className='profile-container' style={{display: 'none'}}>
+        <Profile />
+      </div>
       {/*
       <Footer/> */}
     </div>

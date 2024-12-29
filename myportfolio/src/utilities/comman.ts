@@ -2,7 +2,7 @@ import Home from "../Container/Home/Home";
 import AboutMe from "../Container/AboutMe/AboutMe";
 import Resume from "../Container/Resume/Resume";
 import ContactMe from "../Container/ContactMe/ContactMe";
-import Projects from "../Container/Projects/Projects";
+import Projects from "../Container/Projects/Projects.tsx";
 
 // Define the type for a screen
 interface Screen {

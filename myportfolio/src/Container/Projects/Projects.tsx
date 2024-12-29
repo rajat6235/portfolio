@@ -8,15 +8,26 @@ import Animations from "../../utilities/Animations.ts";
 import ScrollService from "../../utilities/ScrollService.ts";
 import ImageModal from "../ImageModal/ImageModal.tsx";
 import { projectData } from "./ProjectsData.tsx";
+import { ProjectData, Project } from "../../utilities/interfaces.ts";
 
-const Projects = (props) => {
-  const [modalState, setModalState] = useState({
+interface ProjectsProps {
+  id: string;
+}
+
+interface ModalState {
+  type: string | null;
+  isOpen: boolean;
+  currentImage: number;
+}
+
+const Projects: React.FC<ProjectsProps> = (props) => {
+  const [modalState, setModalState] = useState<ModalState>({
     type: null,
     isOpen: false,
     currentImage: 0,
   });
 
-  let fadeInScreenHandler = (screen) => {
+  const fadeInScreenHandler = (screen: { fadeInScreen: string }) => {
     if (screen.fadeInScreen !== props.id) return;
     Animations.animations.fadeInScreen(props.id);
   };
@@ -29,7 +40,7 @@ const Projects = (props) => {
     };
   }, [fadeInSubscription]);
 
-  const openModal = (type, index) => {
+  const openModal = (type: string, index: number) => {
     setModalState({
       type: type,
       isOpen: true,
@@ -54,8 +65,8 @@ const Projects = (props) => {
     arrows: !modalState.isOpen,
   };
 
-  const renderProject = (projectKey) => {
-    const project = projectData[projectKey];
+  const renderProject = (projectKey: keyof ProjectData) => {
+    const project: Project = projectData[projectKey];
 
     return (
       <div className="single-project" key={projectKey}>
@@ -65,7 +76,7 @@ const Projects = (props) => {
               <div
                 key={index}
                 className="image-container"
-                onClick={() => openModal(projectKey, index)}
+                onClick={() => openModal(projectKey.toString(), index)}
               >
                 <img src={image} alt={`${project.title} ${index + 1}`} className="images" />
                 <div className="image-overlay">
@@ -96,9 +107,9 @@ const Projects = (props) => {
     <div className="projects-container screen-container fade-in" id={props.id || ""}>
       <div className="projects-parent">
         <ScreenHeading title={"Projects"} subHeading={"Work history"} />
-        {Object.keys(projectData).map(projectKey => renderProject(projectKey))}
+        {Object.keys(projectData).map(projectKey => renderProject(projectKey as keyof ProjectData))}
         
-        {modalState.isOpen && (
+        {modalState.isOpen && modalState.type && (
           <ImageModal
             isOpen={modalState.isOpen}
             onRequestClose={closeModal}

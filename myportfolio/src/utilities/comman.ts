@@ -1,7 +1,7 @@
 import Home from "../Container/Home/Home";
 import AboutMe from "../Container/AboutMe/AboutMe.tsx";
 import Resume from "../Container/Resume/Resume";
-import ContactMe from "../Container/ContactMe/ContactMe";
+import ContactMe from "../Container/ContactMe/ContactMe.tsx";
 import Projects from "../Container/Projects/Projects.tsx";
 
 // Define the type for a screen

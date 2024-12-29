@@ -2,15 +2,17 @@ import React, { useState } from "react";
 import Typical from "react-typical";
 import { toast } from "react-toastify";
 import axios from "axios";
-import imgBack from "../../../src/images/mailz.jpeg";
-import load1 from "../../../src/images/load2.gif";
+import imgBack from "../../assets/images/mailz.jpeg";
+import load1 from "../../assets/images/load2.gif";
 import ScreenHeading from "../../utilities/ScreenHeadings/ScreenHeading.tsx";
 import ScrollService from "../../utilities/ScrollService.ts";
 import Animations from "../../utilities/Animations.ts";
-import Footer from "../Home/Footer/Footer";
+import Footer from "../Home/Footer/Footer.tsx";
 import "./ContactMe.css";
-
-export default function ContactMe(props) {
+interface ContactMeProps {
+  id: string;
+}
+const ContactMe: React.FC<ContactMeProps> = (props) => {
   let fadeInScreenHandler = (screen) => {
     if (screen.fadeInScreen !== props.id) return;
     Animations.animations.fadeInScreen(props.id);
@@ -42,22 +44,22 @@ export default function ContactMe(props) {
         email,
         message,
       };
-      setBool(true);
+      setBool("true");
       const res = await axios.post(`https://portfoliobackend-79k1.onrender.com/contact`, data);
       if (name.length === 0 || email.length === 0 || message.length === 0) {
         setBanner(res.data.msg);
         toast.error(res.data.msg);
-        setBool(false);
+        setBool('false');
       }
       else if  (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))
       {  
         toast.error(res.data.msg);
-        setBool(false);
+        setBool('false');
        } 
       else if (res.status === 200) {
         setBanner(res.data.msg);
         toast.success(res.data.msg);
-        setBool(false);
+        setBool('false');
         
         setName("");
         setEmail("");
@@ -98,13 +100,11 @@ export default function ContactMe(props) {
 
             <label htmlFor="email">Email</label>
             <input type="text" onChange={handleEmail} value={email} />
-
             <label htmlFor="message">Message</label>
-            <textarea type="text" onChange={handleMessage} value={message} />
+            <textarea onChange={handleMessage} value={message} />
 
             <div className="send-btn">
-              <button type="submt">
-                
+              <button type="submit">
 
               {bool ? (
             <b className="load">
@@ -129,3 +129,4 @@ export default function ContactMe(props) {
     </div>
   );
 }
+export default ContactMe;

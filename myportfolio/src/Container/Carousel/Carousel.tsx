@@ -20,19 +20,25 @@ const slides = [
 	},
 ];
 
-const CustomCarousel = ({ loading, setLoading }) => {
-	const loadedImagesRef = useRef(0);
+interface CustomCarouselProps {
+  loading: boolean;
+  setLoading: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const CustomCarousel: React.FC<CustomCarouselProps> = ({ loading, setLoading }) => {
+	const loadedImagesRef = useRef<number>(0);
+
 	useEffect(() => {
 		const startTime = Date.now();
 		slides.forEach((slide) => {
 			const img = new Image();
 			img.src = slide.src;
 			img.onload = () => {
-				loadedImagesRef.current += 1;
+				(loadedImagesRef.current as number) += 1;
 
-				if (loadedImagesRef.current === slides.length) {
+				if ((loadedImagesRef.current as number) === slides.length) {
 					const elapsedTime = Date.now() - startTime;
-					const delay = Math.max(0, 250 - elapsedTime); // Calculate remaining time to reach 0.5 seconds
+					const delay = Math.max(0, 250 - elapsedTime); // Calculate remaining time to reach 0.25 seconds
 
 					setTimeout(() => {
 						setLoading(false);
@@ -40,7 +46,7 @@ const CustomCarousel = ({ loading, setLoading }) => {
 				}
 			};
 		});
-	}, []);
+	}, [setLoading]);
 
 	return (
 		<div id='home' className='carousel-container'>

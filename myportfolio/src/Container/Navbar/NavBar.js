@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import ScrollService from '../../utilities/ScrollService.ts';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import rglogo1 from '../../images/rglogo1.png';
+import rglogo1 from '../../assets/images/rglogo1.png';
 import { GET_SCREEN_INDEX, TOTAL_SCREENS } from '../../utilities/comman.ts';
 import './NavBar.css';
 

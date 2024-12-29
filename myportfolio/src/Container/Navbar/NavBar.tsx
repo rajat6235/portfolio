@@ -8,11 +8,15 @@ import rglogo1 from '../../assets/images/rglogo1.png';
 import { GET_SCREEN_INDEX, TOTAL_SCREENS } from '../../utilities/comman.ts';
 import './NavBar.css';
 
-const NavBar = () => {
-  const [selectedScreen, setSelectedScreen] = useState(0);
-  const [showHeaderOptions, setShowHeaderOptions] = useState(false);
+interface Screen {
+  screen_name: string;
+}
 
-  const updateCurrentScreen = (currentScreen) => {
+const NavBar: React.FC = () => {
+  const [selectedScreen, setSelectedScreen] = useState<number>(0);
+  const [showHeaderOptions, setShowHeaderOptions] = useState<boolean>(false);
+
+  const updateCurrentScreen = (currentScreen: { screenInView: string }) => {
     if (!currentScreen || !currentScreen.screenInView) return;
 
     let screenIndex = GET_SCREEN_INDEX(currentScreen.screenInView);
@@ -30,7 +34,7 @@ const NavBar = () => {
     };
   }, []);
 
-  const switchScreen = (index, screen) => {
+  const switchScreen = (index: number, screen: Screen) => {
     let screenComponent = document.getElementById(screen.screen_name);
     if (!screenComponent) return;
 
@@ -38,7 +42,7 @@ const NavBar = () => {
     setShowHeaderOptions(false);
   };
 
-  const handleNavClick = (index, screen) => {
+  const handleNavClick = (index: number, screen: Screen) => {
     switchScreen(index, screen);
   };
 
@@ -54,7 +58,9 @@ const NavBar = () => {
         <Navbar.Brand href="/">
           <img className="logo" src={rglogo1} alt="Logo" />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Toggle aria-controls="responsive-navbar-nav">
+          <FontAwesomeIcon icon={faBars} />
+        </Navbar.Toggle>
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ml-auto">
             {TOTAL_SCREENS.map((Screen, i) => (

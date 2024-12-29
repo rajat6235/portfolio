@@ -4,10 +4,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Projects.css";
 import ScreenHeading from "../../utilities/ScreenHeadings/ScreenHeading";
-import Animations from "../../utilities/Animations";
+import Animations from "../../utilities/Animations.ts";
 import ScrollService from "../../utilities/ScrollService";
 import ImageModal from "../ImageModal/ImageModal.tsx";
-import { projectData } from "./ProjectsData";
+import { projectData } from "./ProjectsData.tsx";
 
 const Projects = (props) => {
   const [modalState, setModalState] = useState({

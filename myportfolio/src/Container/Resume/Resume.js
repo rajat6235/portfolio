@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ScreenHeading from "../../utilities/ScreenHeadings/ScreenHeading";
 import ScrollService from "../../utilities/ScrollService";
-import Animations from "../../utilities/Animations";
+import Animations from "../../utilities/Animations.ts";
 import "./Resume.css";
 export default function Resume(props) {
   const [selectedBulletIndex, setSelectedBulletIndex] = useState(0);

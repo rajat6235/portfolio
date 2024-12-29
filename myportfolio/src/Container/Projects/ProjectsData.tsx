@@ -4,8 +4,8 @@ import {
     jayTvImages,
     taskManagementImages
   } from '../../assets/projects';
-  
-  export const projectData = {
+  import { ProjectData } from '../../utilities/interfaces';
+  export const projectData: ProjectData = {
     task: {
         title: "Task Management App",
         images: [

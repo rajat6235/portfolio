@@ -1,6 +1,6 @@
 import Home from "../Container/Home/Home";
 import AboutMe from "../Container/AboutMe/AboutMe.tsx";
-import Resume from "../Container/Resume/Resume";
+import Resume from "../Container/Resume/Resume.tsx";
 import ContactMe from "../Container/ContactMe/ContactMe.tsx";
 import Projects from "../Container/Projects/Projects.tsx";
 
@@ -24,7 +24,7 @@ export const TOTAL_SCREENS: Screen[] = [
   },
   {
     screen_name: "Resume",
-    component: Resume,
+    component: Resume as React.ComponentType<{}>,
   },
   {
     screen_name: "Projects",

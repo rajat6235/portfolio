@@ -3,20 +3,43 @@ import ScreenHeading from "../../utilities/ScreenHeadings/ScreenHeading.tsx";
 import ScrollService from "../../utilities/ScrollService.ts";
 import Animations from "../../utilities/Animations.ts";
 import "./Resume.css";
-export default function Resume(props) {
-  const [selectedBulletIndex, setSelectedBulletIndex] = useState(0);
-  const [selectedBulletKey, setSelectedBulletKey] = useState("education");
 
-  const [carousalOffSetStyle, setCarousalOffSetStyle] = useState({});
+interface ResumeProps {
+  id: string;
+}
 
-  let fadeInScreenHandler = (screen) => {
+interface Bullet {
+  label: string;
+  logoSrc: string;
+  key: string;
+}
+
+interface SkillDetail {
+  skill: string;
+  ratingPercentage: number;
+}
+
+interface ResumeHeadingProps {
+  heading?: string;
+  subHeading?: string;
+  description?: string;
+  fromDate?: string;
+  toDate?: string;
+}
+
+export default function Resume(props: ResumeProps) {
+  const [selectedBulletIndex, setSelectedBulletIndex] = useState<number>(0);
+  const [selectedBulletKey, setSelectedBulletKey] = useState<string>("education");
+  const [carousalOffSetStyle, setCarousalOffSetStyle] = useState<React.CSSProperties>({});
+
+  let fadeInScreenHandler = (screen: any) => {
     if (screen.fadeInScreen !== props.id) return;
     Animations.animations.fadeInScreen(props.id);
   };
-  const fadeInSubscription =
-    ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
-  const ResumeHeading = (props) => {
+  const fadeInSubscription = ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
+
+  const ResumeHeading = (props: ResumeHeadingProps) => {
     return (
       <div className="resume-heading" style={{ paddingTop: "10px" }}>
         <div className="resume-main-heading">
@@ -40,23 +63,14 @@ export default function Resume(props) {
     );
   };
 
-  const resumeBullets = [
+  const resumeBullets: Bullet[] = [
     { label: "Education", logoSrc: "education.svg", key: "education" },
-    {
-      label: "Work History ",
-      logoSrc: "work-history.svg",
-      key: "work_experience",
-    },
-    {
-      label: "Programming Skills",
-      logoSrc: "programming-skills.svg",
-      key: "programming_skills",
-    },
-    // { label: "Projects", logoSrc: "projects.svg", key: "projects" },
+    { label: "Work History ", logoSrc: "work-history.svg", key: "work_experience" },
+    { label: "Programming Skills", logoSrc: "programming-skills.svg", key: "programming_skills" },
     { label: "Additional Skills", logoSrc: "interests.svg", key: "interests" },
   ];
 
-  const programmingSkillsDetails = [
+  const programmingSkillsDetails: SkillDetail[] = [
     { skill: "JavaScript", ratingPercentage: 85 },
     { skill: "TypeSript", ratingPercentage: 65 },
     { skill: "Next Js", ratingPercentage: 85 },
@@ -69,24 +83,21 @@ export default function Resume(props) {
     { skill: "CSS", ratingPercentage: 80 },
   ];
 
-
-
-  const handleCarousal = (index, bullet) => {
+  const handleCarousal = (index: number, bullet: Bullet) => {
     let offSetHeight = 360;
-
     let newCarousalOffSet = {
-      style: { transform: "translateY(" + index * offSetHeight * -1 + "px)" },
+      transform: "translateY(" + index * offSetHeight * -1 + "px)",
     };
     setCarousalOffSetStyle(newCarousalOffSet);
     setSelectedBulletIndex(index);
     setSelectedBulletKey(bullet.key);
 
-    // Scroll to the corresponding screen
     const screenElement = document.getElementById(`screen-${index}`);
     if (screenElement) {
       screenElement.scrollIntoView({ behavior: "smooth" });
     }
   };
+
   const getBullets = () => {
     return resumeBullets.map((bullet, index) => {
       const icon = bullet.logoSrc
@@ -106,21 +117,8 @@ export default function Resume(props) {
       );
     });
   };
-  const allDetails = {
-    // projects: (
-    //   <div className="resume-screen-container" key="projects">
-    //     {projectDetails.map((projectsDetails, index) => (
-    //       <ResumeHeading
-    //         key={index}
-    //         heading={projectsDetails.title}
-    //         subHeading={projectsDetails.subHeading}
-    //         description={projectsDetails.description}
-    //         // fromDate={projectsDetails.duration.fromDate}
-    //         // toDate={projectsDetails.duration.toDate}
-    //       />
-    //     ))}
-    //   </div>
-    // ),
+
+  const allDetails: { [key: string]: JSX.Element } = {
     education: (
       <div className="resume-screen-container" key="education">
         <ResumeHeading
@@ -129,7 +127,6 @@ export default function Resume(props) {
           fromDate={"2013"}
           toDate={"2017"}
         />
-
         <ResumeHeading
           heading={"PML S.D public school, Chandigarh"}
           subHeading={"Class 12th non-medical science (CBSE))"}
@@ -144,39 +141,34 @@ export default function Resume(props) {
         />
       </div>
     ),
-    
-  interests: (
-    <div className="resume-screen-container additionalskills" key="interests" style={{paddingRight:'10px'}}>
-      <ResumeHeading
-        heading="Communication & Interpersonal skills"
-        description="Have the ability to communicate the desired message effectively while keeping the listener engaged. Can organize and communicate clearly to support a team or project."
-      />
-      <ResumeHeading
-        heading="Leadership & Management skills"
-        description="Skilled in organizing other people to reach a shared goal and keep the team motivated to reach the desired goal. Can organize and communicate clearly to support a team or project. Proven leadership skills in managing projects and leading teams to success."
-      />
-      <ResumeHeading
-        heading="Quick & Visual Learner"
-        description="I am a very strong visual learner and am determined to solve problems and quickly find an effective solution."
-      />
-      <ResumeHeading
-        heading="Effective Problem Solver"
-        description="I have the capability to solve problems and determining the cause of the problem. Identifying, prioritizing, and selecting alternatives for a solution and implementing a solution."
-      />
-      <ResumeHeading
-        heading="Collaborative Team Player"
-        description="Work effectively in a team environment, fostering open communication and collaboration. Able to contribute positively to group dynamics and encourage team members to achieve common goals."
-      />
-      {/* <ResumeHeading
-        heading="Proven Leadership Skills"
-        description="Demonstrated leadership abilities in overseeing projects and guiding teams. Proactive in taking initiative, making decisions, and providing direction to ensure project success."
-      /> */}
-      <ResumeHeading
-        heading="Strong Analytical and Critical Thinking"
-        description="Possess strong analytical and critical thinking skills, enabling a systematic approach to problem-solving. Able to analyze complex situations, identify key issues, and develop effective solutions."
-      />
-    </div>
-  ),
+    interests: (
+      <div className="resume-screen-container additionalskills" key="interests" style={{ paddingRight: '10px' }}>
+        <ResumeHeading
+          heading="Communication & Interpersonal skills"
+          description="Have the ability to communicate the desired message effectively while keeping the listener engaged. Can organize and communicate clearly to support a team or project."
+        />
+        <ResumeHeading
+          heading="Leadership & Management skills"
+          description="Skilled in organizing other people to reach a shared goal and keep the team motivated to reach the desired goal. Can organize and communicate clearly to support a team or project. Proven leadership skills in managing projects and leading teams to success."
+        />
+        <ResumeHeading
+          heading="Quick & Visual Learner"
+          description="I am a very strong visual learner and am determined to solve problems and quickly find an effective solution."
+        />
+        <ResumeHeading
+          heading="Effective Problem Solver"
+          description="I have the capability to solve problems and determining the cause of the problem. Identifying, prioritizing, and selecting alternatives for a solution and implementing a solution."
+        />
+        <ResumeHeading
+          heading="Collaborative Team Player"
+          description="Work effectively in a team environment, fostering open communication and collaboration. Able to contribute positively to group dynamics and encourage team members to achieve common goals."
+        />
+        <ResumeHeading
+          heading="Strong Analytical and Critical Thinking"
+          description="Possess strong analytical and critical thinking skills, enabling a systematic approach to problem-solving. Able to analyze complex situations, identify key issues, and develop effective solutions."
+        />
+      </div>
+    ),
     programming_skills: (
       <div
         className="resume-screen-container programming-skills-container"
@@ -205,13 +197,7 @@ export default function Resume(props) {
             fromDate={"26 October, 2022"}
             toDate={"present"}
           />
-          {/* <div className="experience-description">
-        <span className="resume-description-text">
-          Worked as Front End Developer
-        </span>
-      </div> */}
           <div className="experience-description">
-              
             <ul>
               <li>
                 Led diverse projects, including Tr0ve, ektamart, flexi-spy
@@ -224,7 +210,7 @@ export default function Resume(props) {
                 codebases, significantly enhancing overall project quality.
               </li>
               <li>
-                  Executed strategic code refactoring for performance
+                Executed strategic code refactoring for performance
                 optimization, aligning with industry best practices and
                 leveraging cutting-edge technologies.
               </li>
@@ -243,7 +229,6 @@ export default function Resume(props) {
               </li>
             </ul>
           </div>
-
           <div style={{ paddingTop: "15px" }}>
             <ResumeHeading
               heading={"Proelio Technologies"}
@@ -251,21 +236,16 @@ export default function Resume(props) {
               fromDate={"28 July, 2021"}
               toDate={"3 March, 2022"}
             />
-            {/* <div className="experience-description">
-        <span className="resume-description-text">
-          Worked as Front End Developer
-        </span>
-      </div> */}
             <div className="experience-description">
               <ul>
                 <li>
                   Worked on company's multiple products like Vectio Home- Health
-                  and Vectio Client Portal.{" "}
+                  and Vectio Client Portal.
                 </li>
                 <li>
                   Built reusable components using javaScript libraries like
                   react big-calendar, react ag-grid, redux, graphql, redux-saga
-                  etc.{" "}
+                  etc.
                 </li>
                 <li>
                   Implemented innovative features on existing products, now in
@@ -286,6 +266,7 @@ export default function Resume(props) {
       </div>
     ),
   };
+
   const getResumeScreen = () => {
     return (
       <div className="resume-details-carousal">
@@ -293,6 +274,7 @@ export default function Resume(props) {
       </div>
     );
   };
+
   useEffect(() => {
     return () => {
       fadeInSubscription.unsubscribe();
@@ -300,7 +282,6 @@ export default function Resume(props) {
   }, [fadeInSubscription]);
 
   return (
-    //classname =-fade-in
     <div
       className="resume-container screen-container fade-in"
       id={props.id || ""}

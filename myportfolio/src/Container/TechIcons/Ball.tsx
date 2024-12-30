@@ -8,10 +8,14 @@ import {
   useTexture,
 } from "@react-three/drei";
 
-import CanvasLoader from "./Loader.jsx";
+import CanvasLoader from "./Loader.tsx";
 
-const Ball = (props) => {
-  const [decal] = useTexture([props.imgUrl]);
+interface BallProps {
+  imgUrl: string;
+}
+
+const Ball: React.FC<BallProps> = ({ imgUrl }) => {
+  const [decal] = useTexture([imgUrl]);
 
   return (
     <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
@@ -27,22 +31,24 @@ const Ball = (props) => {
         />
         <Decal
           position={[0, 0, 1]}
-          rotation={[2 * Math.PI, 0, 0.25]}
+          rotation={[2 * Math.PI, 0, 0.05]}
           scale={1}
           map={decal}
-          flatShading
         />
       </mesh>
     </Float>
   );
 };
 
-const BallCanvas = ({ icon }) => {
+interface BallCanvasProps {
+  icon: string;
+}
+
+const BallCanvas: React.FC<BallCanvasProps> = ({ icon }) => {
   return (
-    
     <Canvas
       frameloop='demand'
-      style={{ width: '100px', height: '100px',cursor: "pointer" }} 
+      style={{ width: '100px', height: '100px', cursor: "pointer" }}
       dpr={[1, 2]}
       gl={{ preserveDrawingBuffer: true }}
     >
@@ -50,7 +56,6 @@ const BallCanvas = ({ icon }) => {
         <OrbitControls enableZoom={false} />
         <Ball imgUrl={icon} />
       </Suspense>
-
       <Preload all />
     </Canvas>
   );

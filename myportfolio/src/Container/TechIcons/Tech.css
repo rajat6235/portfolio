@@ -13,7 +13,8 @@
 @media only screen and (max-width: 580px) {
     .tech-icons-container{
         display: flex;
-        flex-direction: row;
+        position: relative;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
     }

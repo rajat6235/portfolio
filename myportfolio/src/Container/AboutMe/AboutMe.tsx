@@ -3,7 +3,7 @@ import ScreenHeading from "../../utilities/ScreenHeadings/ScreenHeading.tsx";
 import ScrollService from "../../utilities/ScrollService.ts";
 import Animations from "../../utilities/Animations.ts";
 import "./AboutMe.css";
-import Tech from "../TechIcons/Tech.jsx";
+import Tech from "../TechIcons/Tech.tsx";
 
 interface AboutMeProps {
   id: string;

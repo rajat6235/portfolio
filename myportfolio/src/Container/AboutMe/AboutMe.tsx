@@ -3,6 +3,7 @@ import ScreenHeading from "../../utilities/ScreenHeadings/ScreenHeading.tsx";
 import ScrollService from "../../utilities/ScrollService.ts";
 import Animations from "../../utilities/Animations.ts";
 import "./AboutMe.css";
+import Tech from "../TechIcons/Tech.jsx";
 
 interface AboutMeProps {
   id: string;
@@ -51,7 +52,6 @@ const AboutMe: React.FC<AboutMeProps> = (props) => {
       <div className="about-me-parent">
         <ScreenHeading title={"About Me"} subHeading={"Why Choose Me?"} />
         <div className="about-me-card">
-          {/* <div className="about-me-profile"></div>  */}
           <div className="about-me-details">
             <span className="about-me-description">
               {SCREEN_CONSTANTS.description}
@@ -77,6 +77,7 @@ const AboutMe: React.FC<AboutMeProps> = (props) => {
               </a>
             </div>
           </div>
+          <Tech />
         </div>
       </div>
     </div>

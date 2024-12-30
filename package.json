@@ -12,14 +12,12 @@
     "nodemon": "^2.0.18",
     "react-typical": "^0.1.3"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon server.js",
     "myportfolio": "npm start --prefix myportfolio",
     "dev": "concurrently \"npm run  server\" \"npm run myportfolio\"",
-    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install --prefix myportfolio && npm run build --prefix myportfolio"
-
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix myportfolio && npm run build --prefix myportfolio"
   },
   "repository": {
     "type": "git",
@@ -30,5 +28,8 @@
   "bugs": {
     "url": "https://github.com/rajat6235/portfolio/issues"
   },
-  "homepage": "https://github.com/rajat6235/portfolio#readme"
+  "homepage": "https://github.com/rajat6235/portfolio#readme",
+  "devDependencies": {
+    "typescript": "^5.7.2"
+  }
 }

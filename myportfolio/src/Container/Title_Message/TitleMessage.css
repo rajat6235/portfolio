@@ -8,13 +8,25 @@
     z-index: 1;
     text-align: center;
   }
+  .profile-options{
+    display: flex;
+    column-gap: 70px;
+    align-items: center;
+  }
   
   .title-message strong {
     font-size: 1.25em;
   }
+  .profile-role-tagline {
+    font-size: 20px;
+    font-weight: 500 !important;
+    background-color: rgba(0, 0, 0, 0.26);
+    padding: 10px;
+    border-radius: 5px;
+  }
   
   .title-message div {
-    color: #fff; /* Assuming white color */
+    color: #fff; 
     text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
     font-weight: 100;
   }
@@ -27,4 +39,99 @@
     font-size: 27px;
     letter-spacing: 2px;
   }
+
   
+  
+  .button-arounder {
+    font-size: 20px;
+    text-decoration: none;
+    border: none;
+    background: rgb(205 83 44);
+    color: hsl(190deg, 10%, 95%);
+    padding: 10px 15px;
+    border-top-left-radius: var(--radius);
+    border-top-right-radius: var(--radius);
+    border-bottom-left-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
+  
+    
+    --dur: .10s;
+    --delay: .10s;
+    --radius: 50px;
+    
+    transition:
+      border-top-left-radius var(--dur) var(--delay) ease-out,
+      border-top-right-radius var(--dur) calc(var(--delay) * 2) ease-out,
+      border-bottom-right-radius var(--dur) calc(var(--delay) * 3) ease-out,
+      border-bottom-left-radius var(--dur) calc(var(--delay) * 4) ease-out,
+      transform calc(var(--dur) * 4) ease-out,
+      background calc(var(--dur) * 4) steps(4, jump-end);
+  }
+  
+  .button-arounder:hover,
+  .button-arounder:focus {
+    text-decoration: underline;
+    transform: translateY(-4px);
+    background: rgb(255, 88, 35);
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+
+  .hire-btn{
+    
+      font-size: 1em;
+      font-weight: bold;
+      line-height: 60px;
+      text-align: center;
+      background-color: transparent;
+      cursor: pointer;
+      text-decoration:none;
+      font-family: 'Roboto', sans-serif;
+      font-weight:900;
+      font-size:17px;
+      letter-spacing: 0.045em;
+  }
+  .hire-btn svg{
+    width: 160px;
+    height: 60px;
+  }
+  .hire-btn svg rect {
+    stroke-width: 2;
+    stroke-dasharray: 353, 0;
+    stroke-dashoffset: 0;
+    -webkit-transition: all 600ms ease;
+    transition: all 600ms ease;
+}
+
+.hire-btn:hover svg rect {
+  stroke-width: 2;
+  content: attr(data-hover);
+  stroke-dasharray: 97, 229;
+  stroke-dashoffset: 143;
+}
+.hire-btn svg text {
+  fill: #FFF;
+  font-family: inherit;
+font-size: 20px;
+}
+.hire-btn .hover-text {
+  display: none;
+}
+
+.hire-btn:hover .default-text {
+  display: none;
+}
+
+.hire-btn:hover .hover-text {
+  display: block;
+}
+
+@media only screen and (max-width: 568px) {
+.profile-options{
+  flex-direction: column;
+  align-items: center;
+  row-gap: 40px;
+}
+}

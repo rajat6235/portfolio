@@ -3,7 +3,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 50px 0 0 0;
+    padding: 50px 0 50px 0;
+    background-color: #fff;
 }/* Projects.css */
 .projects-parent{
     max-width: 1000px;
@@ -95,7 +96,7 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        margin: 50px 0 0 0;
+        padding: 50px 0 0 0;
     }/* Projects.css */
     .projects-parent{
         max-width: 1000px;

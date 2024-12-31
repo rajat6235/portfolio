@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef , useState} from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import ScrollDown from '../../utilities/ScrollDown/ScrollDown.tsx';
 import './carousal.css';
@@ -27,7 +27,15 @@ interface CustomCarouselProps {
 
 const CustomCarousel: React.FC<CustomCarouselProps> = ({ loading, setLoading }) => {
 	const loadedImagesRef = useRef<number>(0);
-
+	const [isVisible, setIsVisible] = useState(true);
+	const handleScroll = () => {
+		const scrollPosition = window.scrollY;
+		if (scrollPosition > 100) { 
+		  setIsVisible(false);
+		} else {
+		  setIsVisible(true);
+		}
+	  };
 	useEffect(() => {
 		const startTime = Date.now();
 		slides.forEach((slide) => {
@@ -46,6 +54,8 @@ const CustomCarousel: React.FC<CustomCarouselProps> = ({ loading, setLoading }) 
 				}
 			};
 		});
+		window.addEventListener('scroll', handleScroll);
+		return () => window.removeEventListener('scroll', handleScroll);
 	}, [setLoading]);
 
 	return (
@@ -66,7 +76,7 @@ const CustomCarousel: React.FC<CustomCarouselProps> = ({ loading, setLoading }) 
 				interval={2500}
 				pause={false}
 				fade
-				style={{ visibility: loading ? 'hidden' : 'visible' }}>
+				style={{ visibility: loading ? 'hidden' : 'visible' , position: 'fixed',height: '100vh' ,width: '100vw'}}>
 				{slides.map((slide, index) => (
 					<Carousel.Item key={index}>
 						<img className='d-block custom-img' src={slide.src} alt={slide.alt} loading='lazy' />
@@ -74,7 +84,7 @@ const CustomCarousel: React.FC<CustomCarouselProps> = ({ loading, setLoading }) 
 				))}
 			</Carousel>
 
-			<ScrollDown />
+			{isVisible && <ScrollDown />}
 		</div>
 	);
 };

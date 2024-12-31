@@ -1,5 +1,7 @@
 .main-container {
+  padding-top: 50px;
   min-height: auto;
+  background-color: #fff;
 }
 .central-form {
   max-width: 1100px;

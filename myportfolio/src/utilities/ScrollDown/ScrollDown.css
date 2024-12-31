@@ -1,14 +1,14 @@
 .scroll-down {
-    position: relative;
+    position: absolute;
     z-index: 1;
-    bottom: 1.6em;
+    bottom: -2%;
     display: flex;
     width: 100%;
     justify-content: center;
     background-color: transparent;
     font-weight: bold;
     text-shadow: 1px 1px #45a29e;
-    color: blue;
+    color: white;
     animation: 3s linear 1s infinite normal none running MoveUpDown;
   }
   
@@ -23,7 +23,7 @@
     }
   
     50% {
-      bottom: 100px;
+      bottom: 25px;
     }
   }
   

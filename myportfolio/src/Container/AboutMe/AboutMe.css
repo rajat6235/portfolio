@@ -1,9 +1,10 @@
 .about-me-container {
   display: flex;
+  background-color: #fff;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 50px 0 0 0;
+  padding: 50px 0 50px 0;
 }
 .about-me-parent {
   max-width: 1000px;

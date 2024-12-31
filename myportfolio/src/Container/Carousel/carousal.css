@@ -64,7 +64,7 @@
 /* Mobile optimization and rotation */
 @media only screen and (max-width: 768px) {
   .custom-img {
-    height: 98vh;
+    height: 100vh;
     width: auto;
     object-fit: cover;
   }

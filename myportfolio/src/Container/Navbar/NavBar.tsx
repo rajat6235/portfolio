@@ -34,13 +34,21 @@ const NavBar: React.FC = () => {
     };
   }, []);
 
-  const switchScreen = (index: number, screen: Screen) => {
-    let screenComponent = document.getElementById(screen.screen_name);
-    if (!screenComponent) return;
+   const switchScreen = (index: number, screen: Screen) => {
+     let screenComponent = document.getElementById(screen.screen_name);
+     if (!screenComponent) return;
 
-    screenComponent.scrollIntoView({ behavior: 'smooth' });
-    setShowHeaderOptions(false);
-  };
+     const offset = -70; 
+     const elementPosition = screenComponent.getBoundingClientRect().top + window.pageYOffset;
+     const offsetPosition = elementPosition + offset;
+
+     window.scrollTo({
+       top: offsetPosition,
+       behavior: 'smooth'
+     });
+
+     setShowHeaderOptions(false);
+   };
 
   const handleNavClick = (index: number, screen: Screen) => {
     switchScreen(index, screen);

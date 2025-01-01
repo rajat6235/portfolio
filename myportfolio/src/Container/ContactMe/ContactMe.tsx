@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Typical from "react-typical";
 import { toast } from "react-toastify";
 import axios from "axios";
@@ -13,7 +13,7 @@ interface ContactMeProps {
   id: string;
 }
 const ContactMe: React.FC<ContactMeProps> = (props) => {
-  let fadeInScreenHandler = (screen) => {
+  let fadeInScreenHandler = (screen:{fadeInScreen:string}) => {
     if (screen.fadeInScreen !== props.id) return;
     Animations.animations.fadeInScreen(props.id);
   };
@@ -69,6 +69,11 @@ const ContactMe: React.FC<ContactMeProps> = (props) => {
       console.log(error);
     }
   };
+  useEffect(() => {
+    return () => {
+      fadeInSubscription.unsubscribe();
+    };
+  }, []);
 
   return (
     <div className="main-container fade-in" id={props.id || ""}>

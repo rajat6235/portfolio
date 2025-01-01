@@ -12,9 +12,7 @@ export default class ScrollService {
   static currentScreenBroadcaster = new Subject<{ screenInView: string }>();
   static currentScreenFadeIn = new Subject<{ fadeInScreen: string }>();
 
-  constructor() {
-    window.addEventListener("scroll", this.checkCurrentScreenUnderViewport);
-  }
+
 
   scrollToHireMe = (): void => {
     const contactMeScreen = document.getElementById("ContactMe");
@@ -30,51 +28,24 @@ export default class ScrollService {
     homeScreen.scrollIntoView({ behavior: "smooth" });
   };
 
-  isElementInView = (elem: HTMLElement, type: "partial" | "complete"): boolean => {
-    const rec = elem.getBoundingClientRect();
-
-    const elementTop = rec.top;
-    const elemBottom = rec.bottom;
-
-    const partiallyVisible = elementTop < window.innerHeight && elemBottom >= 0;
-    const completelyVisible = elementTop >= 0 && elemBottom <= window.innerHeight;
-
-    switch (type) {
-      case "partial":
-        return partiallyVisible;
-      case "complete":
-        return completelyVisible;
-      default:
-        return false;
-    }
-  };
-
-  checkCurrentScreenUnderViewport = (event: Event): void => {
-    if (!event || Object.keys(event).length < 1) return;
-
-    for (const screen of TOTAL_SCREENS as Screen[]) {
-      const screenFromDOM = document.getElementById(screen.screen_name);
-      if (!screenFromDOM) continue;
-
-      const fullyVisible = this.isElementInView(screenFromDOM, "complete");
-      const partiallyVisible = this.isElementInView(screenFromDOM, "partial");
-
-      if (fullyVisible || partiallyVisible) {
-        if (partiallyVisible && !screen.alreadyRendered) {
+  static observeScreens = () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const screenName = entry.target.id;
           ScrollService.currentScreenFadeIn.next({
-            fadeInScreen: screen.screen_name,
+            fadeInScreen: screenName,
           });
-          screen.alreadyRendered = true;
-          break;
         }
-
-        if (fullyVisible) {
-          ScrollService.currentScreenBroadcaster.next({
-            screenInView: screen.screen_name,
-          });
-          break;
-        }
+      });
+    }, { threshold: [0.1, 0.5, 1.0] });
+  
+    TOTAL_SCREENS.forEach((screen) => {
+      const element = document.getElementById(screen.screen_name);
+      if (element) {
+        observer.observe(element);
       }
-    }
+    });
   };
+
 }

@@ -27,12 +27,12 @@ export const projectData: ProjectData = {
 			{
 				title: 'Email Deliverability',
 				description:
-					'Worked remotely as a full-time team member, optimizing email deliverability, analyzing data, and applying best practices to ensure high inbox placement rates.',
+					'Worked remotely as a full-time team member on a new email deliverability tool within the company’s SaaS app, now used by thousands of customers. The tool tests campaign inbox placement, provides actionable insights, and helps users improve deliverability, optimize campaigns, and avoid spam filters, leading to better performance',
 			},
 			{
-				title: 'Collaboration & Automation',
+				title: 'Proactive Communication',
 				description:
-					"Collaborated with cross-functional teams to integrate and automate email deliverability tools and APIs, improving efficiency and scalability of the platform's outreach features.",
+					"As a full-time remote team member, I maintained regular communication with colleagues across different time zones. I actively participated in team discussions, provided updates, addressed concerns, and ensured alignment on goals to drive the success of the SaaS app.",
 			},
 			{
 				title: 'Maintenance & Improvements',

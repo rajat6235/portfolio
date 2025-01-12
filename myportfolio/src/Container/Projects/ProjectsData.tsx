@@ -27,7 +27,7 @@ export const projectData: ProjectData = {
 			{
 				title: 'Email Deliverability',
 				description:
-					'Worked on a new email deliverability tool, now used by thousands of customers. The tool tests campaign inbox placement, provides actionable insights, and helps users improve deliverability, optimize campaigns, and avoid spam filters, leading to better performance',
+					'Worked on a new email deliverability tool front end, now used by thousands of customers. The tool tests campaign inbox placement, provides actionable insights, and helps users improve deliverability, optimize campaigns, and avoid spam filters, leading to better performance',
 			},
 			{
 				title: 'Proactive Communication',

@@ -60,7 +60,7 @@ const TitleMessage: React.FC = () => (
 					href='RajatGupta_FrontEnd_Developer_Resume.pdf'
 					download='RajatGupta_FrontEnd_Developer_Resume.pdf'
 					className='buttons-container'>
-					<button className=' button-arounder'>Download CV</button>
+					<button className='download-btn'>Download CV</button>
 				</a>
 			</div>
 		</div>

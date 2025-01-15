@@ -25,7 +25,7 @@ const AboutMe: React.FC<AboutMeProps> = (props) => {
 
 	const SCREEN_CONSTANTS = {
 		description:
-			'With a track record of successful projects, I bring a wealth of experience and reliability to the table. My commitment to excellence and attention to detail ensure that every application is built to the highest standards. I am dedicated to delivering solutions that are robust, scalable, and tailored to meet the unique needs of each client',
+			'With years of experience across a variety of projects, I bring a wealth of experience and reliability to the table. My commitment to excellence and attention to detail ensure that every application is built to the highest standards. I am dedicated to delivering solutions that are robust, scalable, and tailored to meet the unique needs of each client',
 		highlights: {
 			bullets: [
 				'User Experience Focus',
@@ -61,13 +61,41 @@ const AboutMe: React.FC<AboutMeProps> = (props) => {
 							{renderHighlight()}
 						</div>
 						<div className='about-me-options'>
-							<button
-								className='btn primary-btn'
+							<div
+								className='hire-btn'
 								onClick={() => ScrollService.scrollHandler.scrollToHireMe()}>
-								Hire Me
-							</button>
-							<a href='RajatGupta_FrontEnd_Developer_Resume.pdf' download='RajatGupta_FrontEnd_Developer_Resume.pdf'>
-								<button className='btn highlighted-btn'>Download CV</button>
+								<svg>
+									<rect
+										x='5'
+										y='5'
+										rx='25'
+										fill='#1f2235'
+										stroke='#ff5823'
+										width='150'
+										height='50'></rect>
+									<text
+										className='default-text'
+										x='50%'
+										y='50%'
+										dominantBaseline='middle'
+										textAnchor='middle'>
+										Hire Me
+									</text>
+									<text
+										className='hover-text'
+										x='50%'
+										y='50%'
+										dominantBaseline='middle'
+										textAnchor='middle'>
+										Let's Connect
+									</text>
+								</svg>
+							</div>
+							<a
+								href='RajatGupta_FrontEnd_Developer_Resume.pdf'
+								download='RajatGupta_FrontEnd_Developer_Resume.pdf'
+								className='buttons-container'>
+								<button className='download-btn'>Download CV</button>
 							</a>
 						</div>
 					</div>

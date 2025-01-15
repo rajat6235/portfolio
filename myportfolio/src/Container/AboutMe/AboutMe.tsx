@@ -66,7 +66,7 @@ const AboutMe: React.FC<AboutMeProps> = (props) => {
 								onClick={() => ScrollService.scrollHandler.scrollToHireMe()}>
 								Hire Me
 							</button>
-							<a href='RajatGuptaResume2022.pdf' download='RajatGuptaResume2022.pdf'>
+							<a href='RajatGupta_FrontEnd_Developer_Resume.pdf' download='RajatGupta_FrontEnd_Developer_Resume.pdf'>
 								<button className='btn highlighted-btn'>Download CV</button>
 							</a>
 						</div>

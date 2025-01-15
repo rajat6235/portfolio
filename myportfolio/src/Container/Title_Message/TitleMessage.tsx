@@ -57,8 +57,8 @@ const TitleMessage: React.FC = () => (
 					</svg>
 				</div>
 				<a
-					href='RajatGuptaResume2022.pdf'
-					download='RajatGuptaResume2022.pdf'
+					href='RajatGupta_FrontEnd_Developer_Resume.pdf'
+					download='RajatGupta_FrontEnd_Developer_Resume.pdf'
 					className='buttons-container'>
 					<button className=' button-arounder'>Download CV</button>
 				</a>

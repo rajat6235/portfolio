@@ -25,7 +25,7 @@ const AboutMe: React.FC<AboutMeProps> = (props) => {
 
 	const SCREEN_CONSTANTS = {
 		description:
-			'With years of experience across a variety of projects, I bring a wealth of experience and reliability to the table. My commitment to excellence and attention to detail ensure that every application is built to the highest standards. I am dedicated to delivering solutions that are robust, scalable, and tailored to meet the unique needs of each client',
+			'With years of experience across various projects, I bring a wealth of expertise and reliability to the table. My commitment to excellence and attention to detail ensure that every application is built to the highest standards. I am dedicated to delivering solutions that are robust, scalable, and tailored to meet the unique needs of each client.',
 		highlights: {
 			bullets: [
 				'User Experience Focus',

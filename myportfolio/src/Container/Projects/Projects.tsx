@@ -89,7 +89,7 @@ const Projects: React.FC<ProjectsProps> = (props) => {
         <div className="description-container" style={{ width: "100%" }}>
           <h4 className="project-title">{project.title}</h4>
           <p>{project.description}</p>
-          <h5 className="sub-title">Roles and Responsibilities</h5>
+          <h5 className="sub-title">Contributions</h5>
           <ul>
             {project.responsibilities.map((resp, index) => (
               <li key={index} className="description">

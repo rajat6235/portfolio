@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/rajat6235/portfolio#readme",
   "devDependencies": {
+    "eslint-plugin-unused-imports": "^4.1.4",
     "typescript": "^5.7.2"
   }
 }

@@ -1,11 +1,13 @@
-import React from 'react'
-import './Footer.css'
+import React from 'react';
+import './Footer.css';
+import shapeBg from '../../../assets/Home/shape-bg.png'; // Import the image directly
+
 export default function Footer() {
   return (
     <div className='footer-container'>
       <div className='footer-parent'>
-<img src ={require ('../../../assets/Home/shape-bg.png') } alt ='no internet connection'/>
+        <img src={shapeBg} alt='no internet connection' />
+      </div>
     </div>
-    </div>
-  )
+  );
 }

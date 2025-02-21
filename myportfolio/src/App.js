@@ -8,7 +8,7 @@ import ScrollService from './utilities/ScrollService.ts';
 function App() {
 	useEffect(() => {
 		ScrollService.observeScreens();
-	  }, []);
+	}, []);
 	return (
 		<div className='App'>
 			<ToastContainer />

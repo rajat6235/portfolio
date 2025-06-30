@@ -9,10 +9,10 @@ interface AboutMeProps {
 	id: string;
 }
 
-const AboutMe: React.FC<AboutMeProps> = (props) => {
+const AboutMe: React.FC<AboutMeProps> = ({ id }) => {
 	const fadeInScreenHandler = (screen: { fadeInScreen: string }) => {
-		if (screen.fadeInScreen !== props.id) return;
-		Animations.animations.fadeInScreen(props.id);
+		if (screen.fadeInScreen !== id) return;
+		Animations.animations.fadeInScreen(id);
 	};
 
 	const fadeInSubscription = ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
@@ -48,7 +48,7 @@ const AboutMe: React.FC<AboutMeProps> = (props) => {
 	};
 
 	return (
-		<div className='about-me-container screen-container fade-in' id={props.id || ''}>
+		<div className='about-me-container screen-container fade-in' id={id || ''}>
 			<div className='about-me-parent'>
 				<ScreenHeading title={'About Me'} subHeading={'Why Choose Me?'} />
 				<div className='about-me-card'>
@@ -87,7 +87,7 @@ const AboutMe: React.FC<AboutMeProps> = (props) => {
 										y='50%'
 										dominantBaseline='middle'
 										textAnchor='middle'>
-										Let's Connect
+										Let&apos;s Connect
 									</text>
 								</svg>
 							</div>

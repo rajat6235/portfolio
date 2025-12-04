@@ -65,7 +65,7 @@ const Projects: React.FC<ProjectsProps> = (props) => {
     arrows: !modalState.isOpen,
   };
 
-  const renderProject = (projectKey: keyof ProjectData) => {
+  const renderProject = (projectKey: keyof ProjectData, projectIndex: number) => {
     const project: Project = projectData[projectKey];
 
     return (
@@ -80,21 +80,24 @@ const Projects: React.FC<ProjectsProps> = (props) => {
               >
                 <img src={image} alt={`${project.title} ${index + 1}`} className="images" />
                 <div className="image-overlay">
-                  <p>Click here to view full-size image</p>
+                  <p>Click to view full-size image</p>
                 </div>
               </div>
             ))}
           </Slider>
         </div>
-        <div className="description-container" style={{ width: "100%" }}>
-          <h4 className="project-title">{project.title}</h4>
+        <div className="description-container">
+          <div className="project-header">
+            <span className="project-number">0{projectIndex + 1}</span>
+            <h4 className="project-title">{project.title}</h4>
+          </div>
           <p>{project.description}</p>
-          <h5 className="sub-title">Contributions</h5>
+          <h5 className="sub-title">Key Contributions</h5>
           <ul>
             {project.responsibilities.map((resp, index) => (
               <li key={index} className="description">
-                <span className="subHeading_p1">{resp.title}:</span>{" "}
-                {resp.description}
+                <span className="subHeading_p1">{resp.title}</span>
+                <span className="description-text">{resp.description}</span>
               </li>
             ))}
           </ul>
@@ -107,8 +110,8 @@ const Projects: React.FC<ProjectsProps> = (props) => {
     <div className="projects-container screen-container fade-in" id={props.id || ""}>
       <div className="projects-parent">
         <ScreenHeading title={"Projects"} subHeading={"Work history"} />
-        {Object.keys(projectData).map(projectKey => renderProject(projectKey as keyof ProjectData))}
-        
+        {Object.keys(projectData).map((projectKey, index) => renderProject(projectKey as keyof ProjectData, index))}
+
         {modalState.isOpen && modalState.type && (
           <ImageModal
             isOpen={modalState.isOpen}

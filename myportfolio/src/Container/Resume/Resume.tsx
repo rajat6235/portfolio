@@ -32,7 +32,7 @@ export default function Resume(props: ResumeProps) {
 	const [selectedBulletKey, setSelectedBulletKey] = useState<string>('work_experience');
 	const [carousalOffSetStyle, setCarousalOffSetStyle] = useState<React.CSSProperties>({});
 
-	let fadeInScreenHandler = (screen: any) => {
+	const fadeInScreenHandler = (screen: {fadeInScreen: string}) => {
 		if (screen.fadeInScreen !== props.id) return;
 		Animations.animations.fadeInScreen(props.id);
 	};
@@ -82,8 +82,8 @@ export default function Resume(props: ResumeProps) {
 	];
 
 	const handleCarousal = (index: number, bullet: Bullet) => {
-		let offSetHeight = 360;
-		let newCarousalOffSet = {
+		const offSetHeight = 360;
+		const newCarousalOffSet = {
 			transform: 'translateY(' + index * offSetHeight * -1 + 'px)',
 		};
 		setCarousalOffSetStyle(newCarousalOffSet);
@@ -98,6 +98,7 @@ export default function Resume(props: ResumeProps) {
 
 	const getBullets = () => {
 		return resumeBullets.map((bullet, index) => {
+			// eslint-disable-next-line @typescript-eslint/no-require-imports
 			const icon = bullet.logoSrc ? require(`../../assets/Resume/${bullet.logoSrc}`) : '';
 			return (
 				<div
@@ -160,7 +161,7 @@ export default function Resume(props: ResumeProps) {
 						<div className='experience-description'>
 							<ul>
 								<li>
-									Worked on company's multiple products like Vectio Home- Health and Vectio Client
+									Worked on company&apos;s multiple products like Vectio Home- Health and Vectio Client
 									Portal.
 								</li>
 								<li>

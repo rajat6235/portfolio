@@ -5,6 +5,7 @@ import ContactMe from "../Container/ContactMe/ContactMe.tsx";
 import Projects from "../Container/Projects/Projects.tsx";
 
 // Define the type for a screen
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 interface Screen<P = {}> {
   screen_name: string;
   component: React.ComponentType<P>;
@@ -20,18 +21,22 @@ export const TOTAL_SCREENS: Screen[] = [
   },
   {
     screen_name: "AboutMe",
+    // eslint-disable-next-line @typescript-eslint/no-empty-object-type
     component: AboutMe as React.ComponentType<{}>,
   },
   {
     screen_name: "Resume",
+    // eslint-disable-next-line @typescript-eslint/no-empty-object-type
     component: Resume as React.ComponentType<{}>,
   },
   {
     screen_name: "Projects",
+    // eslint-disable-next-line @typescript-eslint/no-empty-object-type
     component: Projects as React.ComponentType<{}>,
   },
   {
     screen_name: "ContactMe",
+    // eslint-disable-next-line @typescript-eslint/no-empty-object-type
     component: ContactMe as React.ComponentType<{}>,
   },
 ];

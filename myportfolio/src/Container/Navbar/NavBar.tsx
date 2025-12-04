@@ -19,7 +19,7 @@ const NavBar: React.FC = () => {
   const updateCurrentScreen = (currentScreen: { screenInView: string }) => {
     if (!currentScreen || !currentScreen.screenInView) return;
 
-    let screenIndex = GET_SCREEN_INDEX(currentScreen.screenInView);
+    const screenIndex = GET_SCREEN_INDEX(currentScreen.screenInView);
     if (screenIndex < 0) return;
 
     setSelectedScreen(screenIndex);
@@ -35,10 +35,10 @@ const NavBar: React.FC = () => {
   }, []);
 
    const switchScreen = (index: number, screen: Screen) => {
-     let screenComponent = document.getElementById(screen.screen_name);
+     const screenComponent = document.getElementById(screen.screen_name);
      if (!screenComponent) return;
 
-     const offset = -70; 
+     const offset = -70;
      const elementPosition = screenComponent.getBoundingClientRect().top + window.pageYOffset;
      const offsetPosition = elementPosition + offset;
 

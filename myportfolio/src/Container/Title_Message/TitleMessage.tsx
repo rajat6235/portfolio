@@ -23,7 +23,7 @@ const TitleMessage: React.FC = () => (
 			</div>
 			<div className='profile-details-name'>
 				<span className='primary-text'>
-					Hello, I'm <span className='highlighted-text'>Rajat Gupta</span>
+					Hello, I&apos;m <span className='highlighted-text'>Rajat Gupta</span>
 				</span>
 			</div>
 			<div className='profile-details-role'>
@@ -52,7 +52,7 @@ const TitleMessage: React.FC = () => (
 							Hire Me
 						</text>
 						<text className='hover-text' x='50%' y='50%' dominantBaseline='middle' textAnchor='middle'>
-							Let's Connect
+							Let&apos;s Connect
 						</text>
 					</svg>
 				</div>

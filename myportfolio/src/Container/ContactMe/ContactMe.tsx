@@ -13,7 +13,7 @@ interface ContactMeProps {
   id: string;
 }
 const ContactMe: React.FC<ContactMeProps> = (props) => {
-  let fadeInScreenHandler = (screen:{fadeInScreen:string}) => {
+  const fadeInScreenHandler = (screen:{fadeInScreen:string}) => {
     if (screen.fadeInScreen !== props.id) return;
     Animations.animations.fadeInScreen(props.id);
   };
@@ -39,7 +39,7 @@ const ContactMe: React.FC<ContactMeProps> = (props) => {
   const submitForm = async (e) => {
     e.preventDefault();
     try {
-      let data = {
+      const data = {
         name,
         email,
         message,
@@ -51,7 +51,7 @@ const ContactMe: React.FC<ContactMeProps> = (props) => {
         toast.error(res.data.msg);
         setBool('false');
       }
-      else if  (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))
+      else if  (!/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(email))
       {  
         toast.error(res.data.msg);
         setBool('false');

@@ -19,14 +19,21 @@ const Ball: React.FC<BallProps> = ({ imgUrl }) => {
 
   return (
     <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
+      {/* eslint-disable-next-line react/no-unknown-property */}
       <ambientLight intensity={0.5} />
+      {/* eslint-disable-next-line react/no-unknown-property */}
       <directionalLight position={[0, 0, 1.35]} />
+      {/* eslint-disable-next-line react/no-unknown-property */}
       <mesh castShadow receiveShadow scale={2.75}>
+        {/* eslint-disable-next-line react/no-unknown-property */}
         <icosahedronGeometry args={[1, 1]} />
         <meshStandardMaterial
           color='#dfe4ff'
+          // eslint-disable-next-line react/no-unknown-property
           polygonOffset
+          // eslint-disable-next-line react/no-unknown-property
           polygonOffsetFactor={-5}
+          // eslint-disable-next-line react/no-unknown-property
           flatShading
         />
         <Decal

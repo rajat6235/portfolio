@@ -24,7 +24,7 @@ const Profile: React.FC = () => {
           <div className="profile-details-name">
             <span className="primary-text">
               {" "}
-              Hello, I'm <span className="highlighted-text">Rajat Gupta</span>
+              Hello, I&apos;m <span className="highlighted-text">Rajat Gupta</span>
             </span>
           </div>
           <div className="profile-details-role">

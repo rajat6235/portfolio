@@ -3,19 +3,22 @@ import Carousel from 'react-bootstrap/Carousel';
 import ScrollDown from '../../utilities/ScrollDown/ScrollDown.tsx';
 import './carousal.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import slide1 from '../../assets/carousal/slide1.webp';
+import slide2 from '../../assets/carousal/slide2.webp';
+import slide3 from '../../assets/carousal/slide3.webp';
 
 // Import images
 const slides = [
 	{
-		src: require('../../assets/carousal/slide1.webp'),
+		src: slide1,
 		alt: 'First slide',
 	},
 	{
-		src: require('../../assets/carousal/slide2.webp'),
+		src: slide2,
 		alt: 'Second slide',
 	},
 	{
-		src: require('../../assets/carousal/slide3.webp'),
+		src: slide3,
 		alt: 'Third slide',
 	},
 ];
@@ -30,12 +33,12 @@ const CustomCarousel: React.FC<CustomCarouselProps> = ({ loading, setLoading }) 
 	const [isVisible, setIsVisible] = useState(true);
 	const handleScroll = () => {
 		const scrollPosition = window.scrollY;
-		if (scrollPosition > 100) { 
-		  setIsVisible(false);
+		if (scrollPosition > 100) {
+			setIsVisible(false);
 		} else {
-		  setIsVisible(true);
+			setIsVisible(true);
 		}
-	  };
+	};
 	useEffect(() => {
 		const startTime = Date.now();
 		slides.forEach((slide) => {
